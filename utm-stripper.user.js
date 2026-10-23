@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UTM Stripper
 // @namespace    https://github.com/perennialtech/utm-stripper
-// @version      0.3.1
+// @version      0.3.0
 // @description  Strip common tracking query parameters using global and host-specific rules.
 // @author       perennialtech
 // @match        http://*/*
@@ -93,130 +93,19 @@
   ];
 
   // MOZILLA_SYNC_GLOBAL_START
+  // Newly proposed global rules are only applied after a human merges the PR.
   const MOZILLA_REVIEWED_GLOBAL = [];
   // MOZILLA_SYNC_GLOBAL_END
   // MOZILLA_SYNC_EXCEPTIONS_START
+  // Remote Settings allowlisted hosts for newly reviewed navigation rules.
   const MOZILLA_REVIEWED_ALLOW_HOSTS = [];
   // MOZILLA_SYNC_EXCEPTIONS_END
   const reviewedGlobal = new Set(MOZILLA_REVIEWED_GLOBAL.map(name => name.toLowerCase()));
   const reviewedAllowHosts = new Set(MOZILLA_REVIEWED_ALLOW_HOSTS.map(name => name.toLowerCase()));
 
   // MOZILLA_SYNC_SITE_START
-  const MOZILLA_REVIEWED_SITES = [
-    {
-      "hosts": [
-        "ca.linkedin.com",
-        "ro.linkedin.com"
-      ],
-      "params": [
-        "trackingid"
-      ]
-    },
-    {
-      "hosts": [
-        "m.imdb.com",
-        "www.imdb.com"
-      ],
-      "params": [
-        "pf_rd_i",
-        "pf_rd_m",
-        "pf_rd_p",
-        "pf_rd_r",
-        "pf_rd_s",
-        "pf_rd_t"
-      ]
-    },
-    {
-      "hosts": [
-        "www.amazon.ac",
-        "www.amazon.ae",
-        "www.amazon.cn",
-        "www.amazon.co.za",
-        "www.amazon.com.be",
-        "www.amazon.com.tr",
-        "www.amazon.eg",
-        "www.amazon.ie",
-        "www.amazon.sa",
-        "www.amazon.se",
-        "www.audible.ca",
-        "www.audible.co.jp",
-        "www.audible.co.uk",
-        "www.audible.com",
-        "www.audible.com.au",
-        "www.audible.com.br",
-        "www.audible.de",
-        "www.audible.es",
-        "www.audible.fr",
-        "www.audible.in",
-        "www.audible.it"
-      ],
-      "params": [
-        "hvadid",
-        "hvbmt",
-        "hvdev",
-        "hvlocphy",
-        "hvnetw",
-        "hvrand",
-        "hvtargid",
-        "hydadcr",
-        "pd_rd_i",
-        "pd_rd_plhdr",
-        "pd_rd_r",
-        "pd_rd_w",
-        "pd_rd_wg",
-        "pf_rd_i",
-        "pf_rd_m",
-        "pf_rd_p",
-        "pf_rd_r",
-        "pf_rd_s",
-        "pf_rd_t",
-        "pf_rd_w"
-      ]
-    },
-    {
-      "hosts": [
-        "www.amazon.ca",
-        "www.amazon.co.jp",
-        "www.amazon.co.uk",
-        "www.amazon.com",
-        "www.amazon.com.au",
-        "www.amazon.com.br",
-        "www.amazon.com.mx",
-        "www.amazon.de",
-        "www.amazon.es",
-        "www.amazon.fr",
-        "www.amazon.in",
-        "www.amazon.it",
-        "www.amazon.nl",
-        "www.amazon.pl",
-        "www.amazon.sg"
-      ],
-      "params": [
-        "hvadid",
-        "hvbmt",
-        "hvdev",
-        "hvlocphy",
-        "hvnetw",
-        "hvrand",
-        "hvtargid",
-        "hydadcr",
-        "pd_rd_i",
-        "pf_rd_i",
-        "pf_rd_m",
-        "pf_rd_s",
-        "pf_rd_t",
-        "pf_rd_w"
-      ]
-    },
-    {
-      "hosts": [
-        "www.bestbuy.com"
-      ],
-      "params": [
-        "irclickid"
-      ]
-    }
-  ];
+  // Site-specific rule proposals are reviewed before merging.
+  const MOZILLA_REVIEWED_SITES = [];
   // MOZILLA_SYNC_SITE_END
 
   const siteTrackingParams = new Map();

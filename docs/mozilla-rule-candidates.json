@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "fingerprint": "19785c965c0a",
   "classificationCounts": {
     "review": 285,
@@ -530,7 +530,7 @@
     "changedScope": [],
     "allowsChanged": false
   },
-  "codeProposal": {
+  "reviewCandidates": {
     "global": [],
     "site": [
       {
@@ -651,6 +651,12 @@
       "googleadservices.com"
     ]
   },
+  "candidateScope": {
+    "groups": 5,
+    "hosts": 41,
+    "hostParameterPairs": 645
+  },
+  "obsoleteReviewed": [],
   "entries": [
     {
       "source": "lgpl",

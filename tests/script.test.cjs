@@ -206,3 +206,26 @@ test('custom preserve exceptions also override site-specific rules', async () =>
   assert.equal(calls.fetch[0][0], 'https://x.com/status/1?s=20');
   assert.equal(calls.fetch[1][0], 'https://youtu.be/abc?si=important');
 });
+
+test('unreviewed upstream share-list candidates do not modify links or application requests', async () => {
+  const {page,calls,handlers} = createPage('https://example.test/?id=1');
+  const urls = [
+    'https://www.imdb.com/title/tt123456/?pf_rd_i=homepage&keep=1',
+    'https://www.amazon.com.au/dp/B000123?hvadid=ads&keep=1',
+    'https://www.bestbuy.com/site/item?irclickid=ads&keep=1',
+    'https://ca.linkedin.com/feed/?trackingid=abc&keep=1',
+  ];
+  for (const url of urls) {
+    await page.fetch(url);
+    const xhr = new page.XMLHttpRequest();
+    xhr.open('GET',url,true);
+    page.navigator.sendBeacon(url,'body');
+    const link = {href:url,matches(s){return s==='a[href], area[href]';},
+      hasAttribute(k){return k==='href';}};
+    handlers.get('click')({composedPath(){return [link]}});
+    assert.equal(link.href,url);
+  }
+  assert.deepEqual(calls.fetch.map(x=>x[0]),urls);
+  assert.deepEqual(calls.xhr.map(x=>x[1]),urls);
+  assert.deepEqual(calls.beacon.map(x=>x[0]),urls);
+});

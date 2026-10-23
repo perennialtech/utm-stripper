@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -35,41 +36,41 @@ jobs:
       - name: Download and compare current Mozilla rules
         run: node scripts/mozilla-rule-review.cjs --output-dir .mozilla-review
 
-      - name: Prepare proposed changes
+      - name: Prepare inventory-only PR
         id: diff
         shell: bash
         run: |
           set -euo pipefail
-          # Compare the FULL upstream rule inventory, not just names that our
-          # userscript would automatically enable. Every source update is PR-worthy.
+          # Only inventory/source changes trigger a proposal. No generated
+          # JavaScript is ever deployed by this automation.
           if [ -f docs/mozilla-source-snapshot.json ] && \
-             cmp -s .mozilla-review/mozilla-source-snapshot.json docs/mozilla-source-snapshot.json && \
-             cmp -s .mozilla-review/utm-stripper.user.js utm-stripper.user.js; then
+             cmp -s .mozilla-review/mozilla-source-snapshot.json docs/mozilla-source-snapshot.json; then
             echo 'has_changes=false' >> "$GITHUB_OUTPUT"
             echo 'Upstream inventory unchanged. No pull request required.'
             exit 0
           fi
-          cp .mozilla-review/utm-stripper.user.js utm-stripper.user.js
           mkdir -p docs
           cp .mozilla-review/mozilla-source-snapshot.json docs/mozilla-source-snapshot.json
           cp .mozilla-review/mozilla-rule-candidates.json docs/mozilla-rule-candidates.json
           cp .mozilla-review/mozilla-rule-report.md docs/mozilla-rule-report.md
           echo 'has_changes=true' >> "$GITHUB_OUTPUT"
 
-      - name: Test proposed userscript
+      - name: Test inventory proposal
         if: steps.diff.outputs.has_changes == 'true'
         run: |
           npm test
           node --check utm-stripper.user.js
           git diff --check
+          # Guardrail: an inventory-only run must never modify the userscript.
+          git diff --exit-code -- utm-stripper.user.js
 
       - name: Create or update review PR
+        id: proposal
         if: steps.diff.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
-            utm-stripper.user.js
             docs/mozilla-source-snapshot.json
             docs/mozilla-rule-candidates.json
             docs/mozilla-rule-report.md
@@ -80,3 +81,11 @@ jobs:
           title: 'chore: review full Mozilla tracking-rule inventory'
           body-path: docs/mozilla-rule-report.md
           draft: true
+
+      # GitHub suppresses most workflow triggers from pushes made with
+      # GITHUB_TOKEN. Explicit workflow_dispatch is an allowed exception.
+      - name: Trigger PR branch tests
+        if: steps.diff.outputs.has_changes == 'true' && steps.proposal.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run test.yml --ref automation/mozilla-rule-inventory

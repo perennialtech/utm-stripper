@@ -1,6 +1,6 @@
 # Review Mozilla tracking rules
 
-**Draft PR for human review; no automatic merge.** This proposal inventories every Mozilla source rule, including ones not safe to deploy as a page-level request interceptor.
+**Draft PR for human review; no automatic merge.** This is an inventory-only proposal. No userscript rules are changed or activated by the automation.
 
 Snapshot fingerprint: 19785c965c0a. Sources are compared semantically, with stable sorting and no run timestamps.
 
@@ -9,7 +9,7 @@ Snapshot fingerprint: 19785c965c0a. Sources are compared semantically, with stab
 | Classification | Source parameter entries | Treatment |
 | --- | ---: | --- |
 | Already covered | 146 | Existing stripping behaviour |
-| Low risk (heuristic) | 28 | Proposed for review when navigation exceptions and exact host scope permit |
+| Low risk (heuristic) | 28 | Advisory candidates only; requires separate compatibility-tested implementation |
 | Needs review | 285 | Explicitly represented in manifest; not enabled |
 | High risk | 52 | Potentially functional, represented but not enabled |
 | Unsupported scope | 3 | Source scope retained verbatim; not enabled |
@@ -543,24 +543,29 @@ Initial baseline: inventories all currently published rules.
 - `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/yclid`
 - `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/ysclid`
 
-## Proposed executable rules
+## Advisory candidates (not enabled)
 
-Global navigation keys (only when both name and upstream exception scope satisfy strict criteria): _None_.
+Potential global navigation keys: _None_.
 
-Host-scoped proposed key groups: 5. The draft PR includes them as executable code changes **only after a human merges it**.
+Potential host-scoped groups: **5** spanning **41** distinct exact hosts and **645** host/parameter pairs. These are suggestions, **not changes to live stripping**.
 
-All remaining Strip-on-Share entries are still recorded in the manifest, including every unsupported hostname and high-risk parameter.
+All remaining Strip-on-Share entries are recorded in the manifest, including every unsupported hostname and high-risk parameter.
+
+## Approved-rule drift requiring manual review
+
+None detected for explicitly reviewed rules.
+
 
 ## Full review manifest
 
 In the PR Files changed tab, see docs/mozilla-rule-candidates.json for **every** rule, its source/group reference, coverage, risk tier and rationale. The companion docs/mozilla-source-snapshot.json preserves the complete hostname/schemeless-site scope, source rule group and exceptions without repeating huge host lists per parameter.
 
-Rules with benign-sounding names can still be functional, especially in API requests; tier labels are heuristics, not evidence of real-world safety.
+Rules with benign-sounding names can still be functional, especially in API requests. Strip-on-Share is not proof of safety for automatic fetch/XHR/beacon/history interception; tier labels are only heuristics.
 
 ## Checklist
 
-- [ ] Review upstream additions, removals, allowlists and site scope.
-- [ ] Promote only tested rules; consider turning off fetch/XHR rewriting for Strip-on-Share-specific keys.
+- [ ] Review upstream additions, removals, allowlists and site scope, including obsoleteReviewed entries.
+- [ ] Promote rules only in separate code changes with positive/negative tests and the appropriate link-only versus request scope.
 - [ ] Add positive/negative browser tests for promoted rules.
 - [ ] Review LGPL/MPL terms and retain source attribution.
 - [ ] Merge only after human approval.
