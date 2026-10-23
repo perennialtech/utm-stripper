@@ -1,0 +1,74 @@
+name: Propose Mozilla tracking rule updates
+
+on:
+  schedule:
+    # Weekly on Monday. Runs may be delayed by GitHub's scheduler.
+    - cron: '37 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: mozilla-tracking-rules
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out default branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test current implementation
+        run: npm test
+
+      - name: Download and compare current Mozilla rules
+        run: node scripts/mozilla-rule-review.cjs --output-dir .mozilla-review
+
+      - name: Prepare proposed changes
+        id: diff
+        shell: bash
+        run: |
+          set -euo pipefail
+          if cmp -s .mozilla-review/utm-stripper.user.js utm-stripper.user.js; then
+            echo 'has_changes=false' >> "$GITHUB_OUTPUT"
+            echo 'No actionable new rules. No pull request required.'
+            exit 0
+          fi
+          cp .mozilla-review/utm-stripper.user.js utm-stripper.user.js
+          mkdir -p docs
+          cp .mozilla-review/report.md docs/mozilla-rule-review.md
+          echo 'has_changes=true' >> "$GITHUB_OUTPUT"
+
+      - name: Test proposed userscript
+        if: steps.diff.outputs.has_changes == 'true'
+        run: |
+          npm test
+          node --check utm-stripper.user.js
+          git diff --check
+
+      - name: Create or update review PR
+        if: steps.diff.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: |
+            utm-stripper.user.js
+            docs/mozilla-rule-review.md
+          branch: automation/mozilla-rule-review
+          base: main
+          delete-branch: true
+          commit-message: 'chore: propose reviewed Mozilla tracking rule updates'
+          title: 'chore: review tracking-rule changes from Mozilla'
+          body-path: docs/mozilla-rule-review.md
+          draft: true

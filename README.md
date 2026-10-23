@@ -68,6 +68,20 @@ The bundled list was reviewed against **Firefox source and live Remote Settings 
 
 This is a **manually curated subset** of the lists, not a vendored copy or a live feed. Firefox's own rules also have different applicability and exception handling. Automatically importing every Firefox rule (especially short names like `s`, `ref`, or `var`) into a userscript that rewrites page requests could break websites. Add new rules only after checking their intended scope and adding tests for both matching and nonmatching websites.
 
+### Automated Mozilla review PRs
+
+The [Propose Mozilla tracking rule updates](.github/workflows/mozilla-rule-review.yml) workflow runs every Monday at 03:37 UTC and can also be started manually from GitHub Actions. It fetches the live Remote Settings collection and the current MPL/LGPL Strip-on-Share rule sources, compares them against our script, and **opens or updates a draft pull request** when there are actionable proposals.
+
+- Only newly listed Remote Settings navigation parameters are proposed globally. Missing Strip-on-Share global entries are shown in the PR's manual-triage section, **not silently enabled globally**.
+- Site-specific proposals are restricted to reviewed tracking-style keys and **exact domains already supported** by the userscript. Potentially functional keys and entirely new site groups are reported for manual consideration.
+- A single stable PR branch (`automation/mozilla-rule-review`) prevents recurring duplicate PRs. The report is deterministic, without run timestamps.
+- The proposed patch increments the userscript's patch version so Violentmonkey can fetch it **after** a human merges the PR. The workflow tests the proposed script and never commits straight to `main`.
+- **No issue fallback:** if PR creation is disallowed or fails, the workflow fails visibly instead.
+
+This workflow requires the repository option **Allow GitHub Actions to create and approve pull requests** and scoped token permissions (`contents: write`, `pull-requests: write`). The generated PRs are drafts and are never auto-merged. PR checks triggered by `GITHUB_TOKEN`-created PRs may not run automatically; the scheduled workflow runs the Node tests before creating/updating its PR.
+
+Run a local comparison with `node scripts/mozilla-rule-review.cjs --output-dir .mozilla-review`. Examine the generated report and proposed userscript; neither is automatically installed.
+
 ## Limits you should know
 
 **A userscript is not a browser-wide network filter.** It cannot remove parameters from the *initial* request used to load the page; cleaning the address bar afterwards does not undo that request. It also cannot reliably intercept:

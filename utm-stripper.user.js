@@ -92,8 +92,19 @@
     },
   ];
 
+  // MOZILLA_SYNC_GLOBAL_START
+  // Newly proposed global rules are only applied after a human merges the PR.
+  const MOZILLA_REVIEWED_GLOBAL = [];
+  // MOZILLA_SYNC_GLOBAL_END
+  for (const name of MOZILLA_REVIEWED_GLOBAL) GLOBAL_TRACKING_PARAMS.add(name.toLowerCase());
+
+  // MOZILLA_SYNC_SITE_START
+  // Site-specific rule proposals are reviewed before merging.
+  const MOZILLA_REVIEWED_SITES = [];
+  // MOZILLA_SYNC_SITE_END
+
   const siteTrackingParams = new Map();
-  for (const { hosts, params } of SITE_RULES) {
+  for (const { hosts, params } of [...SITE_RULES, ...MOZILLA_REVIEWED_SITES]) {
     for (const host of hosts) {
       const names = siteTrackingParams.get(host) || new Set();
       for (const name of params) names.add(name.toLowerCase());
