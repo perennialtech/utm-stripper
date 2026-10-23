@@ -96,7 +96,12 @@
   // Newly proposed global rules are only applied after a human merges the PR.
   const MOZILLA_REVIEWED_GLOBAL = [];
   // MOZILLA_SYNC_GLOBAL_END
-  for (const name of MOZILLA_REVIEWED_GLOBAL) GLOBAL_TRACKING_PARAMS.add(name.toLowerCase());
+  // MOZILLA_SYNC_EXCEPTIONS_START
+  // Remote Settings allowlisted hosts for newly reviewed navigation rules.
+  const MOZILLA_REVIEWED_ALLOW_HOSTS = [];
+  // MOZILLA_SYNC_EXCEPTIONS_END
+  const reviewedGlobal = new Set(MOZILLA_REVIEWED_GLOBAL.map(name => name.toLowerCase()));
+  const reviewedAllowHosts = new Set(MOZILLA_REVIEWED_ALLOW_HOSTS.map(name => name.toLowerCase()));
 
   // MOZILLA_SYNC_SITE_START
   // Site-specific rule proposals are reviewed before merging.
@@ -133,12 +138,16 @@
 
     if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return value;
 
-    const siteParams = siteTrackingParams.get(parsed.hostname.toLowerCase());
+    const hostname = parsed.hostname.toLowerCase();
+    const siteParams = siteTrackingParams.get(hostname);
+    const reviewedGlobalExcluded = [...reviewedAllowHosts].some(host =>
+      hostname === host || hostname.endsWith('.' + host));
     let removed = false;
     for (const key of [...parsed.searchParams.keys()]) {
       const normalized = key.toLowerCase();
       if (!preserveParams.has(normalized) &&
           (normalized.startsWith('utm_') || GLOBAL_TRACKING_PARAMS.has(normalized) ||
+            (!reviewedGlobalExcluded && reviewedGlobal.has(normalized)) ||
             siteParams?.has(normalized))) {
         parsed.searchParams.delete(key);
         removed = true;

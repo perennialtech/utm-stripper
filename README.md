@@ -70,17 +70,20 @@ This is a **manually curated subset** of the lists, not a vendored copy or a liv
 
 ### Automated Mozilla review PRs
 
-The [Propose Mozilla tracking rule updates](.github/workflows/mozilla-rule-review.yml) workflow runs every Monday at 03:37 UTC and can also be started manually from GitHub Actions. It fetches the live Remote Settings collection and the current MPL/LGPL Strip-on-Share rule sources, compares them against our script, and **opens or updates a draft pull request** when there are actionable proposals.
+The [Propose Mozilla tracking rule updates](.github/workflows/mozilla-rule-review.yml) workflow runs every Monday at 03:37 UTC and can also be started manually from GitHub Actions. It fetches the live Remote Settings collection and the current MPL/LGPL Strip-on-Share rule sources, compares them against the last **human-approved upstream snapshot**, and **opens or updates a draft pull request whenever the upstream rules change** — even when no new rule is safe to enable.
 
-- Only newly listed Remote Settings navigation parameters are proposed globally. Missing Strip-on-Share global entries are shown in the PR's manual-triage section, **not silently enabled globally**.
-- Site-specific proposals are restricted to reviewed tracking-style keys and **exact domains already supported** by the userscript. Potentially functional keys and entirely new site groups are reported for manual consideration.
-- A single stable PR branch (`automation/mozilla-rule-review`) prevents recurring duplicate PRs. The report is deterministic, without run timestamps.
-- The proposed patch increments the userscript's patch version so Violentmonkey can fetch it **after** a human merges the PR. The workflow tests the proposed script and never commits straight to `main`.
+- The PR includes **all upstream parameter rules**, across all Mozilla groups and destinations, rather than a fixed allowlist of candidate names. The manifest labels each entry as already covered, lower risk, needs review, high risk, or unsupported scope; no new rule is hidden merely because it requires manual evaluation.
+- Complete source groups, host lists, schemeless-domain rules, and Firefox Remote Settings allowlists are preserved in the PR's source snapshot. Newly added, removed, and scope-modified rules are identified against the merged baseline.
+- Lower-risk tracking identifiers can be proposed as executable changes when their source scope is specific enough; all others remain in the review manifest. **Nothing in a draft PR is installed until a person approves and merges it.** Unlike Firefox, this userscript intercepts page-initiated requests, so even low-risk candidates need testing.
+- A single stable PR branch (`automation/mozilla-rule-inventory`) prevents recurring duplicate PRs. Generated files are deterministic, with no run timestamps.
+- Executable proposals increment the userscript's patch version for Violentmonkey updates **after** merging. The workflow tests proposed code and never commits straight to `main`; metadata-only PRs do not unnecessarily bump the version.
 - **No issue fallback:** if PR creation is disallowed or fails, the workflow fails visibly instead.
 
 This workflow requires the repository option **Allow GitHub Actions to create and approve pull requests** and scoped token permissions (`contents: write`, `pull-requests: write`). The generated PRs are drafts and are never auto-merged. PR checks triggered by `GITHUB_TOKEN`-created PRs may not run automatically; the scheduled workflow runs the Node tests before creating/updating its PR.
 
-Run a local comparison with `node scripts/mozilla-rule-review.cjs --output-dir .mozilla-review`. Examine the generated report and proposed userscript; neither is automatically installed.
+Run a local comparison with `node scripts/mozilla-rule-review.cjs --output-dir .mozilla-review`. Examine the full source snapshot, classified candidates, review report, and proposed userscript; none is automatically installed.
+
+Mozilla's source data includes MPL-2.0 and LGPL-licensed lists. See [upstream rule attribution](docs/UPSTREAM-NOTICE.md) before redistributing modified copies. The local userscript's existing MIT license does not relicense Mozilla's source data.
 
 ## Limits you should know
 

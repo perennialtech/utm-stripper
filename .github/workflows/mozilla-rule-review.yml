@@ -40,14 +40,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if cmp -s .mozilla-review/utm-stripper.user.js utm-stripper.user.js; then
+          # Compare the FULL upstream rule inventory, not just names that our
+          # userscript would automatically enable. Every source update is PR-worthy.
+          if [ -f docs/mozilla-source-snapshot.json ] && \
+             cmp -s .mozilla-review/mozilla-source-snapshot.json docs/mozilla-source-snapshot.json && \
+             cmp -s .mozilla-review/utm-stripper.user.js utm-stripper.user.js; then
             echo 'has_changes=false' >> "$GITHUB_OUTPUT"
-            echo 'No actionable new rules. No pull request required.'
+            echo 'Upstream inventory unchanged. No pull request required.'
             exit 0
           fi
           cp .mozilla-review/utm-stripper.user.js utm-stripper.user.js
           mkdir -p docs
-          cp .mozilla-review/report.md docs/mozilla-rule-review.md
+          cp .mozilla-review/mozilla-source-snapshot.json docs/mozilla-source-snapshot.json
+          cp .mozilla-review/mozilla-rule-candidates.json docs/mozilla-rule-candidates.json
+          cp .mozilla-review/mozilla-rule-report.md docs/mozilla-rule-report.md
           echo 'has_changes=true' >> "$GITHUB_OUTPUT"
 
       - name: Test proposed userscript
@@ -64,11 +70,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
             utm-stripper.user.js
-            docs/mozilla-rule-review.md
-          branch: automation/mozilla-rule-review
+            docs/mozilla-source-snapshot.json
+            docs/mozilla-rule-candidates.json
+            docs/mozilla-rule-report.md
+          branch: automation/mozilla-rule-inventory
           base: main
           delete-branch: true
-          commit-message: 'chore: propose reviewed Mozilla tracking rule updates'
-          title: 'chore: review tracking-rule changes from Mozilla'
-          body-path: docs/mozilla-rule-review.md
+          commit-message: 'chore: inventory all Mozilla tracking rules for review'
+          title: 'chore: review full Mozilla tracking-rule inventory'
+          body-path: docs/mozilla-rule-report.md
           draft: true
