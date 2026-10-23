@@ -1,0 +1,5469 @@
+{
+  "schemaVersion": 1,
+  "fingerprint": "19785c965c0a",
+  "classificationCounts": {
+    "review": 285,
+    "high": 52,
+    "low": 28,
+    "covered": 146,
+    "unsupported-scope": 3
+  },
+  "changes": {
+    "initial": true,
+    "added": [
+      "lgpl/aliexpress/aff_fcid",
+      "lgpl/aliexpress/aff_fsk",
+      "lgpl/aliexpress/aff_platform",
+      "lgpl/aliexpress/aff_short_key",
+      "lgpl/aliexpress/aff_trace_key",
+      "lgpl/aliexpress/algo_expid",
+      "lgpl/aliexpress/algo_pvid",
+      "lgpl/aliexpress/curpageloguid",
+      "lgpl/aliexpress/dp",
+      "lgpl/aliexpress/gps-id",
+      "lgpl/aliexpress/mall_affr",
+      "lgpl/aliexpress/pdp_npi",
+      "lgpl/aliexpress/pvid",
+      "lgpl/aliexpress/scm",
+      "lgpl/aliexpress/scm_id",
+      "lgpl/aliexpress/scm-url",
+      "lgpl/aliexpress/sk",
+      "lgpl/aliexpress/spm",
+      "lgpl/aliexpress/terminal_id",
+      "lgpl/aliexpress/utparam",
+      "lgpl/amazon/_encoding",
+      "lgpl/amazon/adgrpid",
+      "lgpl/amazon/ascsubtag",
+      "lgpl/amazon/creative",
+      "lgpl/amazon/creativeasin",
+      "lgpl/amazon/dchild",
+      "lgpl/amazon/field-lbr_brands_browse-bin",
+      "lgpl/amazon/hvadid",
+      "lgpl/amazon/hvbmt",
+      "lgpl/amazon/hvdev",
+      "lgpl/amazon/hvlocphy",
+      "lgpl/amazon/hvnetw",
+      "lgpl/amazon/hvrand",
+      "lgpl/amazon/hvtargid",
+      "lgpl/amazon/hydadcr",
+      "lgpl/amazon/ingress",
+      "lgpl/amazon/initialissue",
+      "lgpl/amazon/linkcode",
+      "lgpl/amazon/linkid",
+      "lgpl/amazon/pd_rd_i",
+      "lgpl/amazon/pf_rd_i",
+      "lgpl/amazon/pf_rd_m",
+      "lgpl/amazon/pf_rd_s",
+      "lgpl/amazon/pf_rd_t",
+      "lgpl/amazon/pf_rd_w",
+      "lgpl/amazon/plattr",
+      "lgpl/amazon/qid",
+      "lgpl/amazon/qualifier",
+      "lgpl/amazon/rdc",
+      "lgpl/amazon/refrid",
+      "lgpl/amazon/spia",
+      "lgpl/amazon/th",
+      "lgpl/amazon/ts_id",
+      "lgpl/amazon/visitid",
+      "lgpl/amazon/vtr",
+      "lgpl/bbc/at_bbc_team",
+      "lgpl/bbc/facebook_page",
+      "lgpl/bbc/ns_campaign",
+      "lgpl/bbc/ns_fee",
+      "lgpl/bbc/ns_linkname",
+      "lgpl/bbc/ns_mchannel",
+      "lgpl/bbc/ns_source",
+      "lgpl/bbc/ocid",
+      "lgpl/bbc/xtor",
+      "lgpl/bestbuy/acampid",
+      "lgpl/bestbuy/intl",
+      "lgpl/bestbuy/irclickid",
+      "lgpl/bestbuy/irgwc",
+      "lgpl/bestbuy/loc",
+      "lgpl/bestbuy/mpid",
+      "lgpl/bing/cvid",
+      "lgpl/bing/form",
+      "lgpl/bing/qp",
+      "lgpl/bing/qs",
+      "lgpl/bing/sc",
+      "lgpl/bing/sk",
+      "lgpl/bing/sp",
+      "lgpl/bloomberg/leadsource",
+      "lgpl/bloomberg/sref",
+      "lgpl/bloomberg/srnd",
+      "lgpl/carousell/referrer_category_id",
+      "lgpl/carousell/referrer_page_type",
+      "lgpl/carousell/referrer_request_id",
+      "lgpl/carousell/referrer_search_query",
+      "lgpl/carousell/referrer_search_query_source",
+      "lgpl/carousell/referrer_sort_by",
+      "lgpl/carousell/referrer_source",
+      "lgpl/carousell/t-id",
+      "lgpl/carousell/t-referrer_browse_type",
+      "lgpl/carousell/t-source",
+      "lgpl/carousell/tap_index",
+      "lgpl/cnet/ftag",
+      "lgpl/cnn/ref",
+      "lgpl/ebay/_from",
+      "lgpl/ebay/_trkparms",
+      "lgpl/ebay/_trksid",
+      "lgpl/ebay/amdata",
+      "lgpl/ebay/campid",
+      "lgpl/ebay/hash",
+      "lgpl/ebay/mkcid",
+      "lgpl/ebay/mkevt",
+      "lgpl/ebay/mkrid",
+      "lgpl/ebay/ssspo",
+      "lgpl/ebay/sssrc",
+      "lgpl/ebay/ssuid",
+      "lgpl/etsy/click_key",
+      "lgpl/etsy/click_sum",
+      "lgpl/etsy/organic_search_click",
+      "lgpl/etsy/ref",
+      "lgpl/facebook/extid",
+      "lgpl/facebook/mibextid",
+      "lgpl/facebook/tracking",
+      "lgpl/flipkart/_refid",
+      "lgpl/flipkart/affid",
+      "lgpl/flipkart/cid",
+      "lgpl/flipkart/iid",
+      "lgpl/flipkart/lid",
+      "lgpl/flipkart/pageuid",
+      "lgpl/flipkart/pwsvid",
+      "lgpl/flipkart/ssid",
+      "lgpl/flipkart/store",
+      "lgpl/forbes/sh",
+      "lgpl/github/email_source",
+      "lgpl/github/email_token",
+      "lgpl/global/at_campaign",
+      "lgpl/global/at_campaign_type",
+      "lgpl/global/at_creation",
+      "lgpl/global/at_emailtype",
+      "lgpl/global/at_link",
+      "lgpl/global/at_link_id",
+      "lgpl/global/at_link_origin",
+      "lgpl/global/at_link_type",
+      "lgpl/global/at_medium",
+      "lgpl/global/at_ptr_name",
+      "lgpl/global/at_recipient_id",
+      "lgpl/global/at_recipient_list",
+      "lgpl/global/at_send_date",
+      "lgpl/global/utm_campaign_id",
+      "lgpl/global/utm_email",
+      "lgpl/global/utm_email_id",
+      "lgpl/global/utm_newsletter_id",
+      "lgpl/google/aqs",
+      "lgpl/google/bih",
+      "lgpl/google/biw",
+      "lgpl/google/cad",
+      "lgpl/google/cd",
+      "lgpl/google/dcr",
+      "lgpl/google/dpr",
+      "lgpl/google/ei",
+      "lgpl/google/esrc",
+      "lgpl/google/gs_l",
+      "lgpl/google/gs_lcp",
+      "lgpl/google/gs_lcrp",
+      "lgpl/google/gs_lp",
+      "lgpl/google/oe",
+      "lgpl/google/pcampaignid",
+      "lgpl/google/rlz",
+      "lgpl/google/sca_esv",
+      "lgpl/google/sclient",
+      "lgpl/google/sei",
+      "lgpl/google/site",
+      "lgpl/google/sourceid",
+      "lgpl/google/sxsrf",
+      "lgpl/google/usg",
+      "lgpl/google/ved",
+      "lgpl/google/vet",
+      "lgpl/google/visit_id",
+      "lgpl/imdb/pf_rd_i",
+      "lgpl/imdb/pf_rd_m",
+      "lgpl/imdb/pf_rd_p",
+      "lgpl/imdb/pf_rd_r",
+      "lgpl/imdb/pf_rd_s",
+      "lgpl/imdb/pf_rd_t",
+      "lgpl/imdb/ref_",
+      "lgpl/lazada/acm",
+      "lgpl/lazada/ad_src",
+      "lgpl/lazada/cid",
+      "lgpl/lazada/clicktrackinfo",
+      "lgpl/lazada/did",
+      "lgpl/lazada/laz_trackid",
+      "lgpl/lazada/mkttid",
+      "lgpl/lazada/mp",
+      "lgpl/lazada/pos",
+      "lgpl/lazada/scm",
+      "lgpl/lazada/spm",
+      "lgpl/lazada/trafficfrom",
+      "lgpl/linkedin/refid",
+      "lgpl/linkedin/trackingid",
+      "lgpl/linkedin/trk",
+      "lgpl/mirror/int_source",
+      "lgpl/msn/cvid",
+      "lgpl/msn/ei",
+      "lgpl/msn/pc",
+      "lgpl/newyorker/bxid",
+      "lgpl/newyorker/cndid",
+      "lgpl/newyorker/esrc",
+      "lgpl/newyorker/mbid",
+      "lgpl/newyorker/source",
+      "lgpl/nytimes/smid",
+      "lgpl/reddit/correlation_id",
+      "lgpl/reddit/ref",
+      "lgpl/reddit/ref_campaign",
+      "lgpl/reddit/ref_source",
+      "lgpl/reddit/share_id",
+      "lgpl/theathletic/source",
+      "lgpl/tiktok/embed_source",
+      "lgpl/tiktok/enter_method",
+      "lgpl/tiktok/is_from_webapp",
+      "lgpl/tiktok/q",
+      "lgpl/tiktok/refer",
+      "lgpl/tiktok/referer_url",
+      "lgpl/tiktok/sec_uid",
+      "lgpl/tiktok/sender_device",
+      "lgpl/tiktok/share_app_id",
+      "lgpl/tiktok/share_author_id",
+      "lgpl/tiktok/t",
+      "lgpl/tiktok/tt_from",
+      "lgpl/tiktok/web_id",
+      "lgpl/twitch/tt_content",
+      "lgpl/twitch/tt_medium",
+      "lgpl/twitter/cxt",
+      "lgpl/twitter/refsrc",
+      "lgpl/twitter/s",
+      "lgpl/wallstreetjournal/reflink",
+      "lgpl/wired/mbid",
+      "lgpl/wise/adref",
+      "lgpl/wise/clickref",
+      "lgpl/wise/partnerid",
+      "lgpl/wise/partnerizecampaignid",
+      "lgpl/yandex/clid",
+      "lgpl/yandex/did",
+      "lgpl/yandex/from",
+      "lgpl/yandex/mlid",
+      "lgpl/yandex/msid",
+      "lgpl/yandex/persistent_id",
+      "lgpl/yandex/source-serpid",
+      "lgpl/yandex/stid",
+      "lgpl/yandex/suggest_reqid",
+      "lgpl/yandex/utm-term",
+      "lgpl/youtube/feature",
+      "lgpl/youtube/is",
+      "lgpl/youtube/kw",
+      "lgpl/youtube/pp",
+      "lgpl/youtube/si",
+      "mpl/amazon/__mk_de_de",
+      "mpl/amazon/aaxitk",
+      "mpl/amazon/content-id",
+      "mpl/amazon/creativeid",
+      "mpl/amazon/crid",
+      "mpl/amazon/dib",
+      "mpl/amazon/dib_tag",
+      "mpl/amazon/eac_id",
+      "mpl/amazon/eac_link",
+      "mpl/amazon/eac_selected",
+      "mpl/amazon/hsa_cr_id",
+      "mpl/amazon/ipredirectfrom",
+      "mpl/amazon/ipredirectoriginalurl",
+      "mpl/amazon/keywords",
+      "mpl/amazon/lp_asins",
+      "mpl/amazon/lp_query",
+      "mpl/amazon/lp_slot",
+      "mpl/amazon/overridebasecountry",
+      "mpl/amazon/pageloadid",
+      "mpl/amazon/pd_rd_plhdr",
+      "mpl/amazon/pd_rd_r",
+      "mpl/amazon/pd_rd_w",
+      "mpl/amazon/pd_rd_wg",
+      "mpl/amazon/pf_rd_p",
+      "mpl/amazon/pf_rd_r",
+      "mpl/amazon/plink",
+      "mpl/amazon/psc",
+      "mpl/amazon/ref",
+      "mpl/amazon/ref_",
+      "mpl/amazon/ref_pageloadid",
+      "mpl/amazon/s_prefix",
+      "mpl/amazon/sbo",
+      "mpl/amazon/social_share",
+      "mpl/amazon/source_code",
+      "mpl/amazon/sp_csd",
+      "mpl/amazon/sprefix",
+      "mpl/amazon/sr",
+      "mpl/amazon/store_ref",
+      "mpl/bilibili/broadcast_type",
+      "mpl/bilibili/is_room_feed",
+      "mpl/bilibili/live_from",
+      "mpl/bilibili/spm_id_from",
+      "mpl/ebay/customid",
+      "mpl/ebay/toolid",
+      "mpl/facebook/__cft__[0]",
+      "mpl/facebook/__cft__%5b0%5d",
+      "mpl/facebook/__tn__",
+      "mpl/global/__hsfp",
+      "mpl/global/__hssc",
+      "mpl/global/__hstc",
+      "mpl/global/_branch_match_id",
+      "mpl/global/_bta_c",
+      "mpl/global/_bta_tid",
+      "mpl/global/_ga",
+      "mpl/global/_gl",
+      "mpl/global/_hsenc",
+      "mpl/global/_hsmi",
+      "mpl/global/_ke",
+      "mpl/global/_kx",
+      "mpl/global/adgroupid",
+      "mpl/global/adid",
+      "mpl/global/adtype",
+      "mpl/global/bg_aid_k",
+      "mpl/global/bg_aid_v",
+      "mpl/global/bg_campaign",
+      "mpl/global/bg_kw",
+      "mpl/global/bg_source",
+      "mpl/global/bg_source_id",
+      "mpl/global/channable",
+      "mpl/global/cq_cmp",
+      "mpl/global/cq_con",
+      "mpl/global/cq_med",
+      "mpl/global/cq_net",
+      "mpl/global/cq_plac",
+      "mpl/global/cq_plt",
+      "mpl/global/cq_src",
+      "mpl/global/cq_term",
+      "mpl/global/cto_pld",
+      "mpl/global/dm_i",
+      "mpl/global/ef_id",
+      "mpl/global/epik",
+      "mpl/global/fbadid",
+      "mpl/global/fbc_id",
+      "mpl/global/fbclid",
+      "mpl/global/gad_campaignid",
+      "mpl/global/gad_source",
+      "mpl/global/gadid",
+      "mpl/global/gbraid",
+      "mpl/global/gclid",
+      "mpl/global/gclsrc",
+      "mpl/global/gpromocode",
+      "mpl/global/gqt",
+      "mpl/global/h_ad_id",
+      "mpl/global/hsa_acc",
+      "mpl/global/hsa_ad",
+      "mpl/global/hsa_cam",
+      "mpl/global/hsa_grp",
+      "mpl/global/hsa_kw",
+      "mpl/global/hsa_la",
+      "mpl/global/hsa_mt",
+      "mpl/global/hsa_net",
+      "mpl/global/hsa_ol",
+      "mpl/global/hsa_src",
+      "mpl/global/hsa_tgt",
+      "mpl/global/hsa_ver",
+      "mpl/global/hsctatracking",
+      "mpl/global/im_ref",
+      "mpl/global/klar_adid",
+      "mpl/global/klar_cpid",
+      "mpl/global/klar_source",
+      "mpl/global/li_fat_id",
+      "mpl/global/matomo_campaign",
+      "mpl/global/matomo_cid",
+      "mpl/global/matomo_content",
+      "mpl/global/matomo_group",
+      "mpl/global/matomo_keyword",
+      "mpl/global/matomo_medium",
+      "mpl/global/matomo_placement",
+      "mpl/global/matomo_source",
+      "mpl/global/mc_cid",
+      "mpl/global/mc_eid",
+      "mpl/global/meta_placement",
+      "mpl/global/meta_site_source",
+      "mpl/global/mkwid",
+      "mpl/global/msclkid",
+      "mpl/global/mtm_campaign",
+      "mpl/global/mtm_cid",
+      "mpl/global/mtm_content",
+      "mpl/global/mtm_group",
+      "mpl/global/mtm_keyword",
+      "mpl/global/mtm_medium",
+      "mpl/global/mtm_placement",
+      "mpl/global/mtm_source",
+      "mpl/global/nb_adtype",
+      "mpl/global/nb_ap",
+      "mpl/global/nb_expid_meta",
+      "mpl/global/nb_fii",
+      "mpl/global/nb_klid",
+      "mpl/global/nb_kwd",
+      "mpl/global/nb_li_ms",
+      "mpl/global/nb_lp_ms",
+      "mpl/global/nb_mi",
+      "mpl/global/nb_mt",
+      "mpl/global/nb_pc",
+      "mpl/global/nb_pi",
+      "mpl/global/nb_placement",
+      "mpl/global/nb_ppi",
+      "mpl/global/nb_ti",
+      "mpl/global/nbt",
+      "mpl/global/ndclid",
+      "mpl/global/padid",
+      "mpl/global/pcrid",
+      "mpl/global/piwik_campaign",
+      "mpl/global/piwik_keyword",
+      "mpl/global/piwik_kwd",
+      "mpl/global/pk_campaign",
+      "mpl/global/pk_cid",
+      "mpl/global/pk_content",
+      "mpl/global/pk_keyword",
+      "mpl/global/pk_kwd",
+      "mpl/global/pk_medium",
+      "mpl/global/pk_source",
+      "mpl/global/pl_gc",
+      "mpl/global/redirect_log_mongo_id",
+      "mpl/global/redirect_mongo_id",
+      "mpl/global/rtbhc",
+      "mpl/global/rtid",
+      "mpl/global/s_cid",
+      "mpl/global/s_kwcid",
+      "mpl/global/sb_referer_host",
+      "mpl/global/scadid",
+      "mpl/global/sccid",
+      "mpl/global/srsltid",
+      "mpl/global/trk_contact",
+      "mpl/global/trk_module",
+      "mpl/global/trk_msg",
+      "mpl/global/trk_sid",
+      "mpl/global/ttadid",
+      "mpl/global/ttclid",
+      "mpl/global/tw_adid",
+      "mpl/global/tw_campaign",
+      "mpl/global/tw_content",
+      "mpl/global/tw_kwdid",
+      "mpl/global/tw_source",
+      "mpl/global/tw_term",
+      "mpl/global/twclid",
+      "mpl/global/utm_ad",
+      "mpl/global/utm_affiliate",
+      "mpl/global/utm_brand",
+      "mpl/global/utm_campaign",
+      "mpl/global/utm_campaignid",
+      "mpl/global/utm_channel",
+      "mpl/global/utm_cid",
+      "mpl/global/utm_content",
+      "mpl/global/utm_creative",
+      "mpl/global/utm_creative_format",
+      "mpl/global/utm_emcid",
+      "mpl/global/utm_emmid",
+      "mpl/global/utm_id",
+      "mpl/global/utm_id_",
+      "mpl/global/utm_keyword",
+      "mpl/global/utm_klaviyo_id",
+      "mpl/global/utm_marketing_tactic",
+      "mpl/global/utm_medium",
+      "mpl/global/utm_name",
+      "mpl/global/utm_place",
+      "mpl/global/utm_product",
+      "mpl/global/utm_pubreferrer",
+      "mpl/global/utm_reader",
+      "mpl/global/utm_referrer",
+      "mpl/global/utm_serial",
+      "mpl/global/utm_session",
+      "mpl/global/utm_siteid",
+      "mpl/global/utm_social",
+      "mpl/global/utm_social-type",
+      "mpl/global/utm_source",
+      "mpl/global/utm_source_platform",
+      "mpl/global/utm_supplier",
+      "mpl/global/utm_swu",
+      "mpl/global/utm_term",
+      "mpl/global/utm_umguk",
+      "mpl/global/utm_userid",
+      "mpl/global/utm_viz_id",
+      "mpl/global/var",
+      "mpl/global/vero_conv",
+      "mpl/global/wbraid",
+      "mpl/global/wt_mc",
+      "mpl/global/yclid",
+      "mpl/global/ymid",
+      "mpl/handelsblatt/share",
+      "mpl/humblebundle/hmb_campaign",
+      "mpl/humblebundle/hmb_medium",
+      "mpl/humblebundle/hmb_source",
+      "mpl/instagram/ig_rid",
+      "mpl/instagram/igshid",
+      "mpl/linkedin/rcm",
+      "mpl/meetup/eventorigin",
+      "mpl/meetup/recid",
+      "mpl/meetup/recsource",
+      "mpl/meetup/searchid",
+      "mpl/shopee/sp_atk",
+      "mpl/shopee/xptdk",
+      "mpl/spotify/si",
+      "mpl/tokopedia/extparam",
+      "mpl/twitter/ref_src",
+      "mpl/twitter/ref_url",
+      "mpl/wikimedia/wprov",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/__s",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/_hsenc",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/fbclid",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/mc_eid",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/mkt_tok",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/oly_anon_id",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/oly_enc_id",
+      "remote/76495cfc-fac9-4079-9b5f-9ff0784484de/vero_id",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hsfp",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hssc",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hstc",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/_hsenc",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/_openstat",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/dclid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/gbraid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/gclid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/hsctatracking",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/msclkid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/twclid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/wbraid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/wickedid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/yclid",
+      "remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/ysclid"
+    ],
+    "removed": [],
+    "changedScope": [],
+    "allowsChanged": false
+  },
+  "codeProposal": {
+    "global": [],
+    "site": [
+      {
+        "hosts": [
+          "ca.linkedin.com",
+          "ro.linkedin.com"
+        ],
+        "params": [
+          "trackingid"
+        ]
+      },
+      {
+        "hosts": [
+          "m.imdb.com",
+          "www.imdb.com"
+        ],
+        "params": [
+          "pf_rd_i",
+          "pf_rd_m",
+          "pf_rd_p",
+          "pf_rd_r",
+          "pf_rd_s",
+          "pf_rd_t"
+        ]
+      },
+      {
+        "hosts": [
+          "www.amazon.ac",
+          "www.amazon.ae",
+          "www.amazon.cn",
+          "www.amazon.co.za",
+          "www.amazon.com.be",
+          "www.amazon.com.tr",
+          "www.amazon.eg",
+          "www.amazon.ie",
+          "www.amazon.sa",
+          "www.amazon.se",
+          "www.audible.ca",
+          "www.audible.co.jp",
+          "www.audible.co.uk",
+          "www.audible.com",
+          "www.audible.com.au",
+          "www.audible.com.br",
+          "www.audible.de",
+          "www.audible.es",
+          "www.audible.fr",
+          "www.audible.in",
+          "www.audible.it"
+        ],
+        "params": [
+          "hvadid",
+          "hvbmt",
+          "hvdev",
+          "hvlocphy",
+          "hvnetw",
+          "hvrand",
+          "hvtargid",
+          "hydadcr",
+          "pd_rd_i",
+          "pd_rd_plhdr",
+          "pd_rd_r",
+          "pd_rd_w",
+          "pd_rd_wg",
+          "pf_rd_i",
+          "pf_rd_m",
+          "pf_rd_p",
+          "pf_rd_r",
+          "pf_rd_s",
+          "pf_rd_t",
+          "pf_rd_w"
+        ]
+      },
+      {
+        "hosts": [
+          "www.amazon.ca",
+          "www.amazon.co.jp",
+          "www.amazon.co.uk",
+          "www.amazon.com",
+          "www.amazon.com.au",
+          "www.amazon.com.br",
+          "www.amazon.com.mx",
+          "www.amazon.de",
+          "www.amazon.es",
+          "www.amazon.fr",
+          "www.amazon.in",
+          "www.amazon.it",
+          "www.amazon.nl",
+          "www.amazon.pl",
+          "www.amazon.sg"
+        ],
+        "params": [
+          "hvadid",
+          "hvbmt",
+          "hvdev",
+          "hvlocphy",
+          "hvnetw",
+          "hvrand",
+          "hvtargid",
+          "hydadcr",
+          "pd_rd_i",
+          "pf_rd_i",
+          "pf_rd_m",
+          "pf_rd_s",
+          "pf_rd_t",
+          "pf_rd_w"
+        ]
+      },
+      {
+        "hosts": [
+          "www.bestbuy.com"
+        ],
+        "params": [
+          "irclickid"
+        ]
+      }
+    ],
+    "allowHosts": [
+      "googleadservices.com"
+    ]
+  },
+  "entries": [
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "aff_fcid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "aff_fsk",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "aff_platform",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "aff_short_key",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "aff_trace_key",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "algo_expid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "algo_pvid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "curpageloguid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "dp",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "gps-id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "mall_affr",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "pdp_npi",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "pvid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "scm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "scm_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "scm-url",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "sk",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "spm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "terminal_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "param": "utparam",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "_encoding",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "adgrpid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ascsubtag",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "creative",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "creativeasin",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "dchild",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "field-lbr_brands_browse-bin",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvadid",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvbmt",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvdev",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvlocphy",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvnetw",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvrand",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hvtargid",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hydadcr",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ingress",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "initialissue",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "linkcode",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "linkid",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pd_rd_i",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_i",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_m",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_s",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_t",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_w",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "plattr",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "qid",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "qualifier",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "rdc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "refrid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "spia",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "th",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ts_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "visitid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "vtr",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "at_bbc_team",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "facebook_page",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ns_campaign",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ns_fee",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ns_linkname",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ns_mchannel",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ns_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "ocid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "param": "xtor",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "acampid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "intl",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "irclickid",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "irgwc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "loc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "param": "mpid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "cvid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "form",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "qp",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "qs",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "sc",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "sk",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "param": "sp",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bloomberg",
+      "scope": "site",
+      "param": "leadsource",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bloomberg",
+      "scope": "site",
+      "param": "sref",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "bloomberg",
+      "scope": "site",
+      "param": "srnd",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_category_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_page_type",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_request_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_search_query",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_search_query_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_sort_by",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "referrer_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "t-id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "t-referrer_browse_type",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "t-source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "param": "tap_index",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "cnet",
+      "scope": "site",
+      "param": "ftag",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "cnn",
+      "scope": "site",
+      "param": "ref",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "_from",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "_trkparms",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "_trksid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "amdata",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "campid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "hash",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "mkcid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "mkevt",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "mkrid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "ssspo",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "sssrc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "ssuid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "etsy",
+      "scope": "site",
+      "param": "click_key",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "etsy",
+      "scope": "site",
+      "param": "click_sum",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "etsy",
+      "scope": "site",
+      "param": "organic_search_click",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "etsy",
+      "scope": "site",
+      "param": "ref",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "extid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "mibextid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.facebook.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "tracking",
+      "classification": "review",
+      "rationale": "Tracking-like, but generic enough to affect site application behaviour",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "_refid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "affid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "cid",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "iid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "lid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "pageuid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "pwsvid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "ssid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "param": "store",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "forbes",
+      "scope": "site",
+      "param": "sh",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "github",
+      "scope": "site",
+      "param": "email_source",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "github",
+      "scope": "site",
+      "param": "email_token",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_campaign",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_campaign_type",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_creation",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_emailtype",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_link",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_link_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_link_origin",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_link_type",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_medium",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_ptr_name",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_recipient_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_recipient_list",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "at_send_date",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_campaign_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_email",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_email_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_newsletter_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "aqs",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "bih",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "biw",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "cad",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "cd",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "dcr",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "dpr",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "ei",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "esrc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "gs_l",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "gs_lcp",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "gs_lcrp",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "gs_lp",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "oe",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "pcampaignid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "rlz",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "sca_esv",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "sclient",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "sei",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "site",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "sourceid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "sxsrf",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "usg",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "ved",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "vet",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "param": "visit_id",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_i",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_m",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_p",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_r",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_s",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "pf_rd_t",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "param": "ref_",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "acm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "ad_src",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "cid",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "clicktrackinfo",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "did",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "laz_trackid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "mkttid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "mp",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "pos",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "scm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "spm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "param": "trafficfrom",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "linkedin",
+      "scope": "site",
+      "param": "refid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "linkedin",
+      "scope": "site",
+      "param": "trackingid",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "linkedin",
+      "scope": "site",
+      "param": "trk",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "mirror",
+      "scope": "site",
+      "param": "int_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "msn",
+      "scope": "site",
+      "param": "cvid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "msn",
+      "scope": "site",
+      "param": "ei",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "msn",
+      "scope": "site",
+      "param": "pc",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "param": "bxid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "param": "cndid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "param": "esrc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "param": "mbid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "param": "source",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "nytimes",
+      "scope": "site",
+      "param": "smid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "param": "correlation_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.reddit.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "param": "ref",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "param": "ref_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.reddit.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "param": "ref_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.reddit.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "param": "share_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.reddit.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "theathletic",
+      "scope": "site",
+      "param": "source",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "embed_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "enter_method",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "is_from_webapp",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "q",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "refer",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "referer_url",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "sec_uid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "sender_device",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "share_app_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "share_author_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "t",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "tt_from",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "param": "web_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "twitch",
+      "scope": "site",
+      "param": "tt_content",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "twitch",
+      "scope": "site",
+      "param": "tt_medium",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "twitter",
+      "scope": "site",
+      "param": "cxt",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "twitter",
+      "scope": "site",
+      "param": "refsrc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "twitter",
+      "scope": "site",
+      "param": "s",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "wallstreetjournal",
+      "scope": "site",
+      "param": "reflink",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "wired",
+      "scope": "site",
+      "param": "mbid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "wise",
+      "scope": "site",
+      "param": "adref",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "wise",
+      "scope": "site",
+      "param": "clickref",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "wise",
+      "scope": "site",
+      "param": "partnerid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "wise",
+      "scope": "site",
+      "param": "partnerizecampaignid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "clid",
+      "classification": "review",
+      "rationale": "Tracking-like, but generic enough to affect site application behaviour",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "did",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "from",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "mlid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "msid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "persistent_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "source-serpid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "stid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "suggest_reqid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "param": "utm-term",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "param": "feature",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "param": "is",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "param": "kw",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "param": "pp",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "param": "si",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "m.youtube.com",
+        "www.youtube.com",
+        "youtu.be",
+        "youtube.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "__mk_de_de",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "aaxitk",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "content-id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "creativeid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "crid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "dib",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "dib_tag",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "eac_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "eac_link",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "eac_selected",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "hsa_cr_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ipredirectfrom",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ipredirectoriginalurl",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "keywords",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "lp_asins",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "lp_query",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "lp_slot",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "overridebasecountry",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pageloadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pd_rd_plhdr",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pd_rd_r",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pd_rd_w",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pd_rd_wg",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_p",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "pf_rd_r",
+      "classification": "low",
+      "rationale": "Distinct click/tracking identifier with an explicit Mozilla host scope; still requires manual compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "plink",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "psc",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ref",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ref_",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "ref_pageloadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "s_prefix",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "sbo",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "social_share",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "source_code",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "sp_csd",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "sprefix",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "sr",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "param": "store_ref",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "bilibili",
+      "scope": "site",
+      "param": "broadcast_type",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "bilibili",
+      "scope": "site",
+      "param": "is_room_feed",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "bilibili",
+      "scope": "site",
+      "param": "live_from",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "bilibili",
+      "scope": "site",
+      "param": "spm_id_from",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "live.bilibili.com",
+        "space.bilibili.com",
+        "www.bilibili.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "customid",
+      "classification": "unsupported-scope",
+      "rationale": "Has schemeless/domain-suffix scope or no exact hosts; needs scope modelling",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "ebay",
+      "scope": "site",
+      "param": "toolid",
+      "classification": "unsupported-scope",
+      "rationale": "Has schemeless/domain-suffix scope or no exact hosts; needs scope modelling",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "__cft__[0]",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "__cft__%5b0%5d",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "facebook",
+      "scope": "site",
+      "param": "__tn__",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "__hsfp",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "__hssc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "__hstc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_branch_match_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_bta_c",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_bta_tid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_ga",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_gl",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_hsenc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_hsmi",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_ke",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "_kx",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "adgroupid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "adid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "adtype",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_aid_k",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_aid_v",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_campaign",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_kw",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "bg_source_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "channable",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_cmp",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_con",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_med",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_net",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_plac",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_plt",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_src",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cq_term",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "cto_pld",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "dm_i",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "ef_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "epik",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "fbadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "fbc_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "fbclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gad_campaignid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gad_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gbraid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gclsrc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gpromocode",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "gqt",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "h_ad_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_acc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_ad",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_cam",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_grp",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_kw",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_la",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_mt",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_net",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_ol",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_src",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_tgt",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsa_ver",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "hsctatracking",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "im_ref",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "klar_adid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "klar_cpid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "klar_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "li_fat_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_content",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_group",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_keyword",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_medium",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_placement",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "matomo_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mc_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mc_eid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "meta_placement",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "meta_site_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mkwid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "msclkid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_content",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_group",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_keyword",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_medium",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_placement",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "mtm_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_adtype",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_ap",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_expid_meta",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_fii",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_klid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_kwd",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_li_ms",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_lp_ms",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_mi",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_mt",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_pc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_pi",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_placement",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_ppi",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nb_ti",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "nbt",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "ndclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "padid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pcrid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "piwik_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "piwik_keyword",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "piwik_kwd",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_content",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_keyword",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_kwd",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_medium",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pk_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "pl_gc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "redirect_log_mongo_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "redirect_mongo_id",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "rtbhc",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "rtid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "s_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "s_kwcid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "sb_referer_host",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "scadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "sccid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "srsltid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "trk_contact",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "trk_module",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "trk_msg",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "trk_sid",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "ttadid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "ttclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_adid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_campaign",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_content",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_kwdid",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "tw_term",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "twclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_ad",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_affiliate",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_brand",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_campaign",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_campaignid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_channel",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_cid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_content",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_creative",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_creative_format",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_emcid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_emmid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_id_",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_keyword",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_klaviyo_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_marketing_tactic",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_medium",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_name",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_place",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_product",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_pubreferrer",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_reader",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_referrer",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_serial",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_session",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_siteid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_social",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_social-type",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_source",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_source_platform",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_supplier",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_swu",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_term",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_umguk",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_userid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "utm_viz_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "var",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "vero_conv",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "wbraid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "wt_mc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "yclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "param": "ymid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "handelsblatt",
+      "scope": "site",
+      "param": "share",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "humblebundle",
+      "scope": "site",
+      "param": "hmb_campaign",
+      "classification": "review",
+      "rationale": "Tracking-shaped name, but Strip-on-Share context differs from automatic request interception",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "humblebundle",
+      "scope": "site",
+      "param": "hmb_medium",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "humblebundle",
+      "scope": "site",
+      "param": "hmb_source",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "instagram",
+      "scope": "site",
+      "param": "ig_rid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "www.instagram.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "instagram",
+      "scope": "site",
+      "param": "igshid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "linkedin",
+      "scope": "site",
+      "param": "rcm",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "meetup",
+      "scope": "site",
+      "param": "eventorigin",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "meetup",
+      "scope": "site",
+      "param": "recid",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "meetup",
+      "scope": "site",
+      "param": "recsource",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "meetup",
+      "scope": "site",
+      "param": "searchid",
+      "classification": "high",
+      "rationale": "Short or potentially functional key; may change navigation, content or account flows",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "shopee",
+      "scope": "site",
+      "param": "sp_atk",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "shopee",
+      "scope": "site",
+      "param": "xptdk",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "spotify",
+      "scope": "site",
+      "param": "si",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "open.spotify.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "tokopedia",
+      "scope": "site",
+      "param": "extparam",
+      "classification": "review",
+      "rationale": "Mozilla stripping rule; needs site/API compatibility review",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "mpl",
+      "group": "twitter",
+      "scope": "site",
+      "param": "ref_src",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "twitter",
+      "scope": "site",
+      "param": "ref_url",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "wikimedia",
+      "scope": "site",
+      "param": "wprov",
+      "classification": "unsupported-scope",
+      "rationale": "Has schemeless/domain-suffix scope or no exact hosts; needs scope modelling",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "__s",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "_hsenc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "fbclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "mc_eid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "mkt_tok",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "oly_anon_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "oly_enc_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "scope": "navigation",
+      "param": "vero_id",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "__hsfp",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "__hssc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "__hstc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "_hsenc",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "_openstat",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "dclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "gbraid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "gclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "hsctatracking",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "msclkid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "twclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "wbraid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "wickedid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "yclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    },
+    {
+      "source": "remote",
+      "group": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "scope": "navigation",
+      "param": "ysclid",
+      "classification": "covered",
+      "rationale": "Already stripped in userscript",
+      "currentlyCoveredHosts": []
+    }
+  ]
+}
