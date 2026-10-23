@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UTM Stripper
 // @namespace    https://github.com/perennialtech/utm-stripper
-// @version      0.3.0
+// @version      0.3.1
 // @description  Strip common tracking query parameters using global and host-specific rules.
 // @author       perennialtech
 // @match        http://*/*
@@ -93,14 +93,48 @@
   ];
 
   // MOZILLA_SYNC_GLOBAL_START
-  // Newly proposed global rules are only applied after a human merges the PR.
   const MOZILLA_REVIEWED_GLOBAL = [];
   // MOZILLA_SYNC_GLOBAL_END
   for (const name of MOZILLA_REVIEWED_GLOBAL) GLOBAL_TRACKING_PARAMS.add(name.toLowerCase());
 
   // MOZILLA_SYNC_SITE_START
-  // Site-specific rule proposals are reviewed before merging.
-  const MOZILLA_REVIEWED_SITES = [];
+  const MOZILLA_REVIEWED_SITES = [
+    {
+      "hosts": [
+        "www.amazon.ca",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.de",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sg"
+      ],
+      "params": [
+        "hvadid",
+        "hvbmt",
+        "hvdev",
+        "hvlocphy",
+        "hvnetw",
+        "hvrand",
+        "hvtargid",
+        "hydadcr",
+        "pd_rd_i",
+        "pf_rd_i",
+        "pf_rd_m",
+        "pf_rd_s",
+        "pf_rd_t",
+        "pf_rd_w"
+      ]
+    }
+  ];
   // MOZILLA_SYNC_SITE_END
 
   const siteTrackingParams = new Map();
