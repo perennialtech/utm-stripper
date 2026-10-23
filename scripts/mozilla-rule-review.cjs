@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Source-derived review proposals. No Mozilla rule is deployed without a merge.
+// Source-derived audit only. Automated discovery never changes executable rules.
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
@@ -196,61 +196,57 @@ function analyze(script, snapshot, previousSnapshot = null) {
     groupByParams.get(signature).hosts.push(host);
   }
   const readySites = [...groupByParams.values()].sort((a,b)=>a.hosts[0].localeCompare(b.hosts[0],'en'));
-  const codeProposal = {global:unique(readyGlobal), site:readySites, allowHosts:remoteAllowHosts};
+  // Advisory metadata only. Never promote these suggestions into the userscript.
+  const reviewCandidates = {global:unique(readyGlobal), site:readySites, allowHosts:remoteAllowHosts};
+  const scopePairs = reviewCandidates.site.reduce((count, group) =>
+    count + group.hosts.length * group.params.length, 0);
+  const distinctHosts = new Set(reviewCandidates.site.flatMap(group => group.hosts)).size;
+  // Explicitly approved local rules must be audited against current upstream
+  // sources on EVERY run; source removals and scope shrinkage are not additive.
+  const upstreamGlobal = new Set(entries.filter(entry => entry.scope === 'global' ||
+    entry.scope === 'navigation').map(entry => entry.param));
+  const upstreamSites = new Map();
+  for (const entry of entries.filter(entry => entry.scope === 'site')) {
+    for (const host of entry.hosts) {
+      if (!upstreamSites.has(host)) upstreamSites.set(host, new Set());
+      upstreamSites.get(host).add(entry.param);
+    }
+  }
+  const obsoleteReviewed = [];
+  for (const param of unique(local.reviewedGlobal)) {
+    if (!upstreamGlobal.has(param))
+      obsoleteReviewed.push({scope:'global', param, reason:'No longer present in global or navigation upstream rules'});
+  }
+  for (const {hosts,params} of local.reviewedSites) {
+    for (const host of hosts) {
+      for (const param of params) {
+        if (!upstreamSites.get(lower(host))?.has(lower(param)))
+          obsoleteReviewed.push({scope:'site', host:lower(host), param:lower(param),
+            reason:'Exact hostname/parameter pair is absent from current upstream site rules'});
+      }
+    }
+  }
+  obsoleteReviewed.sort((a,b) => JSON.stringify(a).localeCompare(JSON.stringify(b), 'en'));
+  const candidateScope = {groups:reviewCandidates.site.length, hosts:distinctHosts, hostParameterPairs:scopePairs};
   const classificationCounts = {};
   for (const entry of entries) classificationCounts[entry.classification] = (classificationCounts[entry.classification]||0)+1;
   const changes = {initial: !previousSnapshot, added, removed, changedScope, allowsChanged};
   const fingerprint = crypto.createHash('sha256').update(outputJSON(snapshot)).digest('hex').slice(0,12);
-  return {schemaVersion:1, fingerprint, classificationCounts, changes,
-    codeProposal, entries};
-}
-function replaceMarked(source, startName, endName, name, values) {
-  const begin = '  // '+startName, end = '  // '+endName;
-  const a = source.indexOf(begin), b = source.indexOf(end);
-  if (a < 0 || b <= a || source.indexOf(begin, a+1) >= 0) throw new Error('Malformed markers: '+startName);
-  const json = JSON.stringify(values, null, 2).replaceAll('\n','\n  ');
-  return source.slice(0,a+begin.length) + '\n  const '+name+' = '+json+';\n' + source.slice(b);
-}
-function proposedScript(script, result) {
-  const current = localRules(script);
-  const merged = unique([...current.reviewedGlobal,...result.codeProposal.global]);
-  const newAllowHosts = merged.length ? result.codeProposal.allowHosts : [];
-  if (!result.codeProposal.global.length && !result.codeProposal.site.length &&
-      JSON.stringify(current.reviewedAllowHosts) === JSON.stringify(newAllowHosts)) return script;
-  const sitesByHost = new Map();
-  for (const entry of [...current.reviewedSites, ...result.codeProposal.site]) {
-    for (const host of entry.hosts) {
-      if (!sitesByHost.has(host)) sitesByHost.set(host, new Set());
-      for (const param of entry.params) sitesByHost.get(host).add(param);
-    }
-  }
-  const grouped = new Map();
-  for (const host of sorted(sitesByHost.keys())) {
-    const params = unique(sitesByHost.get(host)), signature = JSON.stringify(params);
-    if (!grouped.has(signature)) grouped.set(signature, {hosts:[],params});
-    grouped.get(signature).hosts.push(host);
-  }
-  const mergedSites = [...grouped.values()].sort((a,b)=>a.hosts[0].localeCompare(b.hosts[0], 'en'));
-  let output = replaceMarked(script,'MOZILLA_SYNC_GLOBAL_START','MOZILLA_SYNC_GLOBAL_END','MOZILLA_REVIEWED_GLOBAL',merged);
-  output = replaceMarked(output,'MOZILLA_SYNC_EXCEPTIONS_START','MOZILLA_SYNC_EXCEPTIONS_END','MOZILLA_REVIEWED_ALLOW_HOSTS',newAllowHosts);
-  output = replaceMarked(output,'MOZILLA_SYNC_SITE_START','MOZILLA_SYNC_SITE_END','MOZILLA_REVIEWED_SITES',mergedSites);
-  if (output === script) return script;
-  const m = output.match(/^\/\/ @version\s+(\d+)\.(\d+)\.(\d+)\s*$/m);
-  if (!m) throw new Error('Cannot bump userscript version');
-  return output.replace(m[0], '// @version      '+m[1]+'.'+m[2]+'.'+(Number(m[3])+1));
+  return {schemaVersion:2, fingerprint, classificationCounts, changes,
+    reviewCandidates, candidateScope, obsoleteReviewed, entries};
 }
 function markdownReport(snapshot, result) {
-  const {changes,classificationCounts,entries,fingerprint,codeProposal} = result;
+  const {changes,classificationCounts,entries,fingerprint,reviewCandidates,candidateScope,obsoleteReviewed} = result;
   const total = entries.length;
   const count = category => classificationCounts[category] || 0;
   const lines = [
     '# Review Mozilla tracking rules', '',
-    '**Draft PR for human review; no automatic merge.** This proposal inventories every Mozilla source rule, including ones not safe to deploy as a page-level request interceptor.', '',
+    '**Draft PR for human review; no automatic merge.** This is an inventory-only proposal. No userscript rules are changed or activated by the automation.', '',
     'Snapshot fingerprint: '+fingerprint+'. Sources are compared semantically, with stable sorting and no run timestamps.', '',
     '## Coverage and risk', '',
     '| Classification | Source parameter entries | Treatment |','| --- | ---: | --- |',
     '| Already covered | '+count('covered')+' | Existing stripping behaviour |',
-    '| Low risk (heuristic) | '+count('low')+' | Proposed for review when navigation exceptions and exact host scope permit |',
+    '| Low risk (heuristic) | '+count('low')+' | Advisory candidates only; requires separate compatibility-tested implementation |',
     '| Needs review | '+count('review')+' | Explicitly represented in manifest; not enabled |',
     '| High risk | '+count('high')+' | Potentially functional, represented but not enabled |',
     '| Unsupported scope | '+count('unsupported-scope')+' | Source scope retained verbatim; not enabled |',
@@ -265,17 +261,24 @@ function markdownReport(snapshot, result) {
   for (const key of ['added','removed','changedScope']) {
     if (changes[key].length) lines.push('', '### '+key, '', ...changes[key].map(x=>'- '+String.fromCharCode(96)+x+String.fromCharCode(96)));
   }
-  lines.push('', '## Proposed executable rules', '',
-    'Global navigation keys (only when both name and upstream exception scope satisfy strict criteria): '+
-      (codeProposal.global.length ? codeProposal.global.join(', ') : '_None_')+'.', '',
-    'Host-scoped proposed key groups: '+codeProposal.site.length+'. The draft PR includes them as executable code changes **only after a human merges it**.', '',
-    'All remaining Strip-on-Share entries are still recorded in the manifest, including every unsupported hostname and high-risk parameter.', '',
+  lines.push('', '## Advisory candidates (not enabled)', '',
+    'Potential global navigation keys: '+
+      (reviewCandidates.global.length ? reviewCandidates.global.join(', ') : '_None_')+'.', '',
+    'Potential host-scoped groups: **'+candidateScope.groups+'** spanning **'+candidateScope.hosts+
+      '** distinct exact hosts and **'+candidateScope.hostParameterPairs+'** host/parameter pairs. These are suggestions, **not changes to live stripping**.', '',
+    'All remaining Strip-on-Share entries are recorded in the manifest, including every unsupported hostname and high-risk parameter.', '',
+    '## Approved-rule drift requiring manual review', '',
+    obsoleteReviewed.length ? '**'+obsoleteReviewed.length+'** previously reviewed global/site rules are absent from current upstream scope:' :
+      'None detected for explicitly reviewed rules.',
+    '', ...obsoleteReviewed.map(entry => '- `'+(entry.scope === 'site' ? entry.host+'/' : '')+entry.param+
+      '` ('+entry.scope+'): '+entry.reason),
+    '',
     '## Full review manifest', '',
     'In the PR Files changed tab, see docs/mozilla-rule-candidates.json for **every** rule, its source/group reference, coverage, risk tier and rationale. The companion docs/mozilla-source-snapshot.json preserves the complete hostname/schemeless-site scope, source rule group and exceptions without repeating huge host lists per parameter.', '',
-    'Rules with benign-sounding names can still be functional, especially in API requests; tier labels are heuristics, not evidence of real-world safety.', '',
+    'Rules with benign-sounding names can still be functional, especially in API requests. Strip-on-Share is not proof of safety for automatic fetch/XHR/beacon/history interception; tier labels are only heuristics.', '',
     '## Checklist', '',
-    '- [ ] Review upstream additions, removals, allowlists and site scope.',
-    '- [ ] Promote only tested rules; consider turning off fetch/XHR rewriting for Strip-on-Share-specific keys.',
+    '- [ ] Review upstream additions, removals, allowlists and site scope, including obsoleteReviewed entries.',
+    '- [ ] Promote rules only in separate code changes with positive/negative tests and the appropriate link-only versus request scope.',
     '- [ ] Add positive/negative browser tests for promoted rules.',
     '- [ ] Review LGPL/MPL terms and retain source attribution.',
     '- [ ] Merge only after human approval.', ''
@@ -292,16 +295,19 @@ async function run(args = process.argv.slice(2)) {
   const fixture = cliArg(args, '--fixture-dir');
   const output = cliArg(args, '--output-dir') || '.mozilla-review';
   const baseline = cliArg(args, '--baseline') || 'docs/mozilla-source-snapshot.json';
+  const snapshotPath = cliArg(args, '--snapshot-file');
+  if (snapshotPath && fixture) throw new Error('--snapshot-file and --fixture-dir are mutually exclusive');
   const upstream = fixture ? {
     remote: JSON.parse(fs.readFileSync(path.join(fixture,'remote.json'),'utf8')),
     mpl: JSON.parse(fs.readFileSync(path.join(fixture,'MPL2.json'),'utf8')),
     lgpl: JSON.parse(fs.readFileSync(path.join(fixture,'LGPL.json'),'utf8'))
-  } : await fetchUpstream();
-  const snapshot = sourceSnapshot(upstream);
+  } : snapshotPath ? null : await fetchUpstream();
+  const snapshot = snapshotPath ? JSON.parse(fs.readFileSync(snapshotPath,'utf8')) : sourceSnapshot(upstream);
+  if (snapshot.schemaVersion !== 1 || !Array.isArray(snapshot.remote) || !Array.isArray(snapshot.groups))
+    throw new Error('Invalid source snapshot');
   const previous = fs.existsSync(baseline) ? JSON.parse(fs.readFileSync(baseline,'utf8')) : null;
   const script = fs.readFileSync(USERSCRIPT,'utf8');
   const result = analyze(script,snapshot,previous);
-  const proposed = proposedScript(script,result);
   fs.mkdirSync(output,{recursive:true});
   fs.writeFileSync(path.join(output,'mozilla-source-snapshot.json'),outputJSON(snapshot));
   const compactReview = {...result,entries:result.entries.map(e=>({
@@ -311,8 +317,7 @@ async function run(args = process.argv.slice(2)) {
   }))};
   fs.writeFileSync(path.join(output,'mozilla-rule-candidates.json'),outputJSON(compactReview));
   fs.writeFileSync(path.join(output,'mozilla-rule-report.md'),markdownReport(snapshot,result));
-  fs.writeFileSync(path.join(output,'utm-stripper.user.js'),proposed);
-  console.log(JSON.stringify({fingerprint:result.fingerprint, classificationCounts:result.classificationCounts, changes:result.changes, runtimeChanged:proposed!==script}).slice(0,1000));
+  console.log(JSON.stringify({fingerprint:result.fingerprint, classificationCounts:result.classificationCounts, changes:result.changes, runtimeChanged:false}).slice(0,1000));
 }
 if (require.main===module) run().catch(error=>{console.error(error);process.exitCode=1});
-module.exports={SOURCES,sourceSnapshot,fetchUpstream,localRules,riskFor,buildEntries,analyze,proposedScript,markdownReport,run};
+module.exports={SOURCES,sourceSnapshot,fetchUpstream,localRules,riskFor,buildEntries,analyze,markdownReport,run};

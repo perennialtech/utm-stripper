@@ -1,11 +1,11 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const vm = require('node:vm');
 const path = require('node:path');
+const os = require('node:os');
+const {spawnSync} = require('node:child_process');
 const {
-  sourceSnapshot, localRules, buildEntries, riskFor, analyze,
-  proposedScript, markdownReport
+  sourceSnapshot, localRules, buildEntries, riskFor, analyze, markdownReport
 } = require('../scripts/mozilla-rule-review.cjs');
 
 // Fixture expectations must stay stable after generated review rules merge.
@@ -58,46 +58,64 @@ test('keeps every uncovered rule in manifest while categorising independently of
   assert.equal(find('remote','global','newclickid').classification,'low');
   assert.ok(result.entries.some(x=>x.hosts.includes('new.example')));
 });
-test('proposes low-risk navigation and exact-host site rules, never ambiguous or allowlisted keys', async () => {
+test('records candidates for human review without emitting executable rules', () => {
   const result = analyze(local,sourceSnapshot(fixture()));
-  assert.deepEqual(result.codeProposal.global,['anotherclickid','newclickid']);
-  assert.deepEqual(result.codeProposal.allowHosts,['allowed.example']);
-  assert.ok(result.codeProposal.site.some(x=>x.hosts.includes('www.amazon.com') &&
+  assert.deepEqual(result.reviewCandidates.global,['anotherclickid','newclickid']);
+  assert.deepEqual(result.reviewCandidates.allowHosts,['allowed.example']);
+  assert.ok(result.reviewCandidates.site.some(x=>x.hosts.includes('www.amazon.com') &&
     x.params.includes('pd_rd_i')));
-  assert.ok(result.codeProposal.site.some(x=>x.hosts.includes('new.example') &&
+  assert.ok(result.reviewCandidates.site.some(x=>x.hosts.includes('new.example') &&
     x.params.includes('clicktracking')));
   assert.equal(result.entries.find(x=>x.source==='remote' && x.param==='anotherclickid').classification,'low');
-  const modified=proposedScript(local,result);
-  new vm.Script(modified);
-  const rules=localRules(modified);
-  assert.ok(rules.reviewedGlobal.includes('newclickid'));
-  assert.ok(rules.reviewedGlobal.includes('anotherclickid'));
-  assert.deepEqual(rules.reviewedAllowHosts,['allowed.example']);
-  assert.ok(rules.reviewedSites.some(x=>x.params.includes('pd_rd_i')));
-  assert.ok(!rules.reviewedSites.some(x=>x.params.includes('th') || x.params.includes('q')));
-  const before=local.match(/^\/\/ @version\s+(\d+)\.(\d+)\.(\d+)/m);
-  const after=modified.match(/^\/\/ @version\s+(\d+)\.(\d+)\.(\d+)/m);
-  assert.equal(Number(after[3]),Number(before[3])+1);
-  const calls=[];
-  const page={URL,Request, document:{baseURI:'https://example.test/',addEventListener(){}},
-    history:{state:null,replaceState(){},pushState(){}},
-    location:{href:'https://example.test/?id=1'},navigator:{sendBeacon(){return true}},
-    XMLHttpRequest:class {open(){}},fetch:async x=>{calls.push(x)}};
-  page.window=page;
-  vm.runInNewContext(modified,page);
-  await page.fetch('https://example.test/?NEWclickid=123&th=1');
-  await page.fetch('https://allowed.example/?anotherclickid=123&newclickid=123&th=1');
-  await page.fetch('https://sub.allowed.example/?newclickid=123&q=still-here');
-  await page.fetch('https://evilallowed.example/?newclickid=123&q=still-here');
-  await page.fetch('https://www.amazon.com/?pd_rd_i=123&th=1&keywords=search');
-  await page.fetch('https://other.example/?clicktracking=yes&q=still-there');
-  assert.equal(calls[0],'https://example.test/?th=1');
-  assert.equal(calls[1],'https://allowed.example/?anotherclickid=123&newclickid=123&th=1');
-  assert.equal(calls[2],'https://sub.allowed.example/?newclickid=123&q=still-here');
-  assert.equal(calls[3],'https://evilallowed.example/?q=still-here');
-  assert.equal(calls[4],'https://www.amazon.com/?th=1&keywords=search');
-  assert.equal(calls[5],'https://other.example/?q=still-there');
+  assert.ok(result.candidateScope.hosts >= 4);
+  assert.ok(result.candidateScope.hostParameterPairs >= result.candidateScope.hosts);
+  assert.deepEqual(localRules(local).reviewedSites,[]);
+  assert.deepEqual(localRules(local).reviewedGlobal,[]);
 });
+
+test('fixture CLI only emits documentation and never writes JavaScript', (t) => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(),'utm-mozilla-review-'));
+  t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));
+  const fixtures = path.join(tmp,'fixtures');
+  const output = path.join(tmp,'output');
+  fs.mkdirSync(fixtures);
+  const f = fixture();
+  for (const [name,value] of [['remote.json',f.remote],['MPL2.json',f.mpl],['LGPL.json',f.lgpl]])
+    fs.writeFileSync(path.join(fixtures,name),JSON.stringify(value));
+  const scriptPath = path.join(__dirname,'../utm-stripper.user.js');
+  const before = fs.readFileSync(scriptPath);
+  const cli = spawnSync(process.execPath,[
+    path.join(__dirname,'../scripts/mozilla-rule-review.cjs'),
+    '--fixture-dir',fixtures,'--output-dir',output,'--baseline',path.join(tmp,'missing.json')
+  ],{encoding:'utf8'});
+  assert.equal(cli.status,0,cli.stderr);
+  assert.deepEqual(fs.readdirSync(output).sort(),[
+    'mozilla-rule-candidates.json','mozilla-rule-report.md','mozilla-source-snapshot.json']);
+  assert.deepEqual(fs.readFileSync(scriptPath),before);
+  const m = JSON.parse(fs.readFileSync(path.join(output,'mozilla-rule-candidates.json'),'utf8'));
+  assert.ok(m.reviewCandidates.site.length > 0);
+  assert.match(fs.readFileSync(path.join(output,'mozilla-rule-report.md'),'utf8'),/inventory-only/i);
+});
+
+test('upstream removals or host-scope shrinkage flag explicitly reviewed rules for reconciliation', () => {
+  const withReview = local
+    .replace('const MOZILLA_REVIEWED_GLOBAL = [];', "const MOZILLA_REVIEWED_GLOBAL = ['newclickid', 'retired_clickid'];")
+    .replace('const MOZILLA_REVIEWED_SITES = [];', "const MOZILLA_REVIEWED_SITES = [{hosts:['www.amazon.com','www.amazon.co.uk','obsolete.example'], params:['pd_rd_i']}];");
+  const first = analyze(withReview, sourceSnapshot(fixture()));
+  assert.deepEqual(first.obsoleteReviewed.map(x=>x.scope+':'+(x.host||'')+':'+x.param),[
+    'global::retired_clickid','site:obsolete.example:pd_rd_i'
+  ]);
+  const newer=fixture();
+  newer.mpl.amazon.hosts=['www.amazon.com'];
+  newer.remote.data[0].stripList=['fbclid'];
+  const next=analyze(withReview,sourceSnapshot(newer),sourceSnapshot(fixture()));
+  assert.ok(next.obsoleteReviewed.some(x=>x.scope==='global'&&x.param==='newclickid'));
+  assert.ok(next.obsoleteReviewed.some(x=>x.host==='www.amazon.co.uk'&&x.param==='pd_rd_i'));
+  assert.ok(next.changes.changedScope.includes('mpl/amazon/pd_rd_i'));
+  assert.ok(next.changes.removed.includes('remote/global/newclickid'));
+  assert.match(markdownReport(sourceSnapshot(newer),next),/retired_clickid/);
+});
+
 test('detects all additions, removals, site scope and remote exceptions changes', () => {
   const initial=sourceSnapshot(fixture());
   const newer=fixture();
@@ -148,5 +166,5 @@ test('future remote rule with ambiguous name is never proposed executable', () =
   f.remote.data[0].stripList.push('t');
   const result=analyze(local,sourceSnapshot(f));
   assert.equal(result.entries.find(x=>x.source==='remote' && x.param==='t').classification,'high');
-  assert.equal(result.codeProposal.global.includes('t'),false);
+  assert.equal(result.reviewCandidates.global.includes('t'),false);
 });

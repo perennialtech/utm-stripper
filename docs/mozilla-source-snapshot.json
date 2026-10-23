@@ -1,0 +1,1404 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "remote": "https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/query-stripping/records",
+    "mpl": "https://raw.githubusercontent.com/mozilla-firefox/firefox/main/toolkit/components/antitracking/StripOnShareLists/MPL2/StripOnShare.json",
+    "lgpl": "https://raw.githubusercontent.com/mozilla-firefox/firefox/main/toolkit/components/antitracking/StripOnShareLists/LGPL/StripOnShareLGPL.json"
+  },
+  "remote": [
+    {
+      "id": "76495cfc-fac9-4079-9b5f-9ff0784484de",
+      "stripList": [
+        "__s",
+        "_hsenc",
+        "fbclid",
+        "mc_eid",
+        "mkt_tok",
+        "oly_anon_id",
+        "oly_enc_id",
+        "vero_id"
+      ],
+      "allowList": []
+    },
+    {
+      "id": "85078bad-f31e-4d93-bb8a-81088b25d6dd",
+      "stripList": [
+        "__hsfp",
+        "__hssc",
+        "__hstc",
+        "_hsenc",
+        "_openstat",
+        "dclid",
+        "gbraid",
+        "gclid",
+        "hsctatracking",
+        "msclkid",
+        "twclid",
+        "wbraid",
+        "wickedid",
+        "yclid",
+        "ysclid"
+      ],
+      "allowList": []
+    },
+    {
+      "id": "a61d2791-d7e1-42e6-9824-0dbe69c33b97",
+      "stripList": [],
+      "allowList": [
+        "googleadservices.com"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "source": "lgpl",
+      "group": "aliexpress",
+      "scope": "site",
+      "hosts": [
+        "ar.aliexpress.com",
+        "robotime.aliexpress.com",
+        "www.aliexpress.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "aff_fcid",
+        "aff_fsk",
+        "aff_platform",
+        "aff_short_key",
+        "aff_trace_key",
+        "algo_expid",
+        "algo_pvid",
+        "curpageloguid",
+        "dp",
+        "gps-id",
+        "mall_affr",
+        "pdp_npi",
+        "pvid",
+        "scm",
+        "scm_id",
+        "scm-url",
+        "sk",
+        "spm",
+        "terminal_id",
+        "utparam"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "amazon",
+      "scope": "site",
+      "hosts": [
+        "www.amazon.ac",
+        "www.amazon.ae",
+        "www.amazon.ca",
+        "www.amazon.cn",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.co.za",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.be",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.com.tr",
+        "www.amazon.de",
+        "www.amazon.eg",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.ie",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sa",
+        "www.amazon.se",
+        "www.amazon.sg",
+        "www.audible.ca",
+        "www.audible.co.jp",
+        "www.audible.co.uk",
+        "www.audible.com",
+        "www.audible.com.au",
+        "www.audible.com.br",
+        "www.audible.de",
+        "www.audible.es",
+        "www.audible.fr",
+        "www.audible.in",
+        "www.audible.it"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "_encoding",
+        "adgrpid",
+        "ascsubtag",
+        "creative",
+        "creativeasin",
+        "dchild",
+        "field-lbr_brands_browse-bin",
+        "hvadid",
+        "hvbmt",
+        "hvdev",
+        "hvlocphy",
+        "hvnetw",
+        "hvrand",
+        "hvtargid",
+        "hydadcr",
+        "ingress",
+        "initialissue",
+        "linkcode",
+        "linkid",
+        "pd_rd_i",
+        "pf_rd_i",
+        "pf_rd_m",
+        "pf_rd_s",
+        "pf_rd_t",
+        "pf_rd_w",
+        "plattr",
+        "qid",
+        "qualifier",
+        "rdc",
+        "refrid",
+        "spia",
+        "th",
+        "ts_id",
+        "visitid",
+        "vtr"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "bbc",
+      "scope": "site",
+      "hosts": [
+        "www.bbc.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "at_bbc_team",
+        "facebook_page",
+        "ns_campaign",
+        "ns_fee",
+        "ns_linkname",
+        "ns_mchannel",
+        "ns_source",
+        "ocid",
+        "xtor"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "bestbuy",
+      "scope": "site",
+      "hosts": [
+        "www.bestbuy.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "acampid",
+        "intl",
+        "irclickid",
+        "irgwc",
+        "loc",
+        "mpid"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "bing",
+      "scope": "site",
+      "hosts": [
+        "www.bing.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "cvid",
+        "form",
+        "qp",
+        "qs",
+        "sc",
+        "sk",
+        "sp"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "bloomberg",
+      "scope": "site",
+      "hosts": [
+        "www.bloomberg.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "leadsource",
+        "sref",
+        "srnd"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "carousell",
+      "scope": "site",
+      "hosts": [
+        "au.carousell.com",
+        "ca.carousell.com",
+        "us.carousell.com",
+        "www.carousell.com.hk",
+        "www.carousell.sg"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "referrer_category_id",
+        "referrer_page_type",
+        "referrer_request_id",
+        "referrer_search_query",
+        "referrer_search_query_source",
+        "referrer_sort_by",
+        "referrer_source",
+        "t-id",
+        "t-referrer_browse_type",
+        "t-source",
+        "tap_index"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "cnet",
+      "scope": "site",
+      "hosts": [
+        "www.cnet.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "ftag"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "cnn",
+      "scope": "site",
+      "hosts": [
+        "edition.cnn.com",
+        "www.cnn.co.jp",
+        "www.cnn.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "ref"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "ebay",
+      "scope": "site",
+      "hosts": [
+        "www.ebay.co.uk",
+        "www.ebay.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "_from",
+        "_trkparms",
+        "_trksid",
+        "amdata",
+        "campid",
+        "hash",
+        "mkcid",
+        "mkevt",
+        "mkrid",
+        "ssspo",
+        "sssrc",
+        "ssuid"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "etsy",
+      "scope": "site",
+      "hosts": [
+        "www.etsy.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "click_key",
+        "click_sum",
+        "organic_search_click",
+        "ref"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "facebook",
+      "scope": "site",
+      "hosts": [
+        "www.facebook.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "extid",
+        "mibextid",
+        "tracking"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "flipkart",
+      "scope": "site",
+      "hosts": [
+        "www.flipkart.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "_refid",
+        "affid",
+        "cid",
+        "iid",
+        "lid",
+        "pageuid",
+        "pwsvid",
+        "ssid",
+        "store"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "forbes",
+      "scope": "site",
+      "hosts": [
+        "www.forbes.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "sh"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "github",
+      "scope": "site",
+      "hosts": [
+        "github.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "email_source",
+        "email_token"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "global",
+      "scope": "global",
+      "hosts": [],
+      "schemelessSites": [],
+      "params": [
+        "at_campaign",
+        "at_campaign_type",
+        "at_creation",
+        "at_emailtype",
+        "at_link",
+        "at_link_id",
+        "at_link_origin",
+        "at_link_type",
+        "at_medium",
+        "at_ptr_name",
+        "at_recipient_id",
+        "at_recipient_list",
+        "at_send_date",
+        "utm_campaign_id",
+        "utm_email",
+        "utm_email_id",
+        "utm_newsletter_id"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "google",
+      "scope": "site",
+      "hosts": [
+        "consent.google.de",
+        "support.google.com",
+        "www.google.ad",
+        "www.google.ae",
+        "www.google.al",
+        "www.google.am",
+        "www.google.as",
+        "www.google.at",
+        "www.google.az",
+        "www.google.ba",
+        "www.google.be",
+        "www.google.bf",
+        "www.google.bg",
+        "www.google.bi",
+        "www.google.bj",
+        "www.google.bs",
+        "www.google.bt",
+        "www.google.by",
+        "www.google.ca",
+        "www.google.cat",
+        "www.google.cd",
+        "www.google.cf",
+        "www.google.cg",
+        "www.google.ch",
+        "www.google.ci",
+        "www.google.cl",
+        "www.google.cm",
+        "www.google.cn",
+        "www.google.co.ao",
+        "www.google.co.bw",
+        "www.google.co.ck",
+        "www.google.co.cr",
+        "www.google.co.id",
+        "www.google.co.il",
+        "www.google.co.in",
+        "www.google.co.jp",
+        "www.google.co.ke",
+        "www.google.co.kr",
+        "www.google.co.ls",
+        "www.google.co.ma",
+        "www.google.co.mz",
+        "www.google.co.nz",
+        "www.google.co.th",
+        "www.google.co.tz",
+        "www.google.co.ug",
+        "www.google.co.uk",
+        "www.google.co.uz",
+        "www.google.co.ve",
+        "www.google.co.vi",
+        "www.google.co.za",
+        "www.google.co.zm",
+        "www.google.co.zw",
+        "www.google.com",
+        "www.google.com.af",
+        "www.google.com.ag",
+        "www.google.com.ar",
+        "www.google.com.au",
+        "www.google.com.bd",
+        "www.google.com.bh",
+        "www.google.com.bn",
+        "www.google.com.bo",
+        "www.google.com.br",
+        "www.google.com.bz",
+        "www.google.com.co",
+        "www.google.com.cu",
+        "www.google.com.cy",
+        "www.google.com.do",
+        "www.google.com.ec",
+        "www.google.com.eg",
+        "www.google.com.et",
+        "www.google.com.fj",
+        "www.google.com.gh",
+        "www.google.com.gi",
+        "www.google.com.gt",
+        "www.google.com.hk",
+        "www.google.com.jm",
+        "www.google.com.kh",
+        "www.google.com.kw",
+        "www.google.com.lb",
+        "www.google.com.ly",
+        "www.google.com.mm",
+        "www.google.com.mt",
+        "www.google.com.mx",
+        "www.google.com.my",
+        "www.google.com.na",
+        "www.google.com.ng",
+        "www.google.com.ni",
+        "www.google.com.np",
+        "www.google.com.om",
+        "www.google.com.pa",
+        "www.google.com.pe",
+        "www.google.com.pg",
+        "www.google.com.ph",
+        "www.google.com.pk",
+        "www.google.com.pr",
+        "www.google.com.py",
+        "www.google.com.qa",
+        "www.google.com.sa",
+        "www.google.com.sb",
+        "www.google.com.sg",
+        "www.google.com.sl",
+        "www.google.com.sv",
+        "www.google.com.tj",
+        "www.google.com.tr",
+        "www.google.com.tw",
+        "www.google.com.ua",
+        "www.google.com.uy",
+        "www.google.com.vc",
+        "www.google.com.vn",
+        "www.google.cv",
+        "www.google.cz",
+        "www.google.de",
+        "www.google.dj",
+        "www.google.dk",
+        "www.google.dm",
+        "www.google.dz",
+        "www.google.ee",
+        "www.google.es",
+        "www.google.fi",
+        "www.google.fm",
+        "www.google.fr",
+        "www.google.ga",
+        "www.google.ge",
+        "www.google.gg",
+        "www.google.gl",
+        "www.google.gm",
+        "www.google.gr",
+        "www.google.gy",
+        "www.google.hn",
+        "www.google.hr",
+        "www.google.ht",
+        "www.google.hu",
+        "www.google.ie",
+        "www.google.im",
+        "www.google.iq",
+        "www.google.is",
+        "www.google.it",
+        "www.google.je",
+        "www.google.jo",
+        "www.google.kg",
+        "www.google.ki",
+        "www.google.kz",
+        "www.google.la",
+        "www.google.li",
+        "www.google.lk",
+        "www.google.lt",
+        "www.google.lu",
+        "www.google.lv",
+        "www.google.md",
+        "www.google.me",
+        "www.google.mg",
+        "www.google.mk",
+        "www.google.ml",
+        "www.google.mn",
+        "www.google.mu",
+        "www.google.mv",
+        "www.google.mw",
+        "www.google.ne",
+        "www.google.nl",
+        "www.google.no",
+        "www.google.nr",
+        "www.google.nu",
+        "www.google.pl",
+        "www.google.pn",
+        "www.google.ps",
+        "www.google.pt",
+        "www.google.ro",
+        "www.google.rs",
+        "www.google.ru",
+        "www.google.rw",
+        "www.google.sc",
+        "www.google.se",
+        "www.google.sh",
+        "www.google.si",
+        "www.google.sk",
+        "www.google.sm",
+        "www.google.sn",
+        "www.google.so",
+        "www.google.sr",
+        "www.google.st",
+        "www.google.td",
+        "www.google.tg",
+        "www.google.tl",
+        "www.google.tm",
+        "www.google.tn",
+        "www.google.to",
+        "www.google.tt",
+        "www.google.vu",
+        "www.google.ws"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "aqs",
+        "bih",
+        "biw",
+        "cad",
+        "cd",
+        "dcr",
+        "dpr",
+        "ei",
+        "esrc",
+        "gs_l",
+        "gs_lcp",
+        "gs_lcrp",
+        "gs_lp",
+        "oe",
+        "pcampaignid",
+        "rlz",
+        "sca_esv",
+        "sclient",
+        "sei",
+        "site",
+        "sourceid",
+        "sxsrf",
+        "usg",
+        "ved",
+        "vet",
+        "visit_id"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "imdb",
+      "scope": "site",
+      "hosts": [
+        "m.imdb.com",
+        "www.imdb.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "pf_rd_i",
+        "pf_rd_m",
+        "pf_rd_p",
+        "pf_rd_r",
+        "pf_rd_s",
+        "pf_rd_t",
+        "ref_"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "lazada",
+      "scope": "site",
+      "hosts": [
+        "pages.lazada.co.id",
+        "www.lazada.co.id",
+        "www.lazada.com.my",
+        "www.lazada.com.ph",
+        "www.lazada.sg",
+        "www.lazada.vn"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "acm",
+        "ad_src",
+        "cid",
+        "clicktrackinfo",
+        "did",
+        "laz_trackid",
+        "mkttid",
+        "mp",
+        "pos",
+        "scm",
+        "spm",
+        "trafficfrom"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "linkedin",
+      "scope": "site",
+      "hosts": [
+        "ca.linkedin.com",
+        "ro.linkedin.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "refid",
+        "trackingid",
+        "trk"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "mirror",
+      "scope": "site",
+      "hosts": [
+        "www.mirror.co.uk"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "int_source"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "msn",
+      "scope": "site",
+      "hosts": [
+        "www.msn.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "cvid",
+        "ei",
+        "pc"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "newyorker",
+      "scope": "site",
+      "hosts": [
+        "www.newyorker.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "bxid",
+        "cndid",
+        "esrc",
+        "mbid",
+        "source"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "nytimes",
+      "scope": "site",
+      "hosts": [
+        "www.nytimes.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "smid"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "reddit",
+      "scope": "site",
+      "hosts": [
+        "www.reddit.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "correlation_id",
+        "ref",
+        "ref_campaign",
+        "ref_source",
+        "share_id"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "theathletic",
+      "scope": "site",
+      "hosts": [
+        "theathletic.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "source"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "tiktok",
+      "scope": "site",
+      "hosts": [
+        "www.tiktok.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "embed_source",
+        "enter_method",
+        "is_from_webapp",
+        "q",
+        "refer",
+        "referer_url",
+        "sec_uid",
+        "sender_device",
+        "share_app_id",
+        "share_author_id",
+        "t",
+        "tt_from",
+        "web_id"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "twitch",
+      "scope": "site",
+      "hosts": [
+        "dev.twitch.tv",
+        "www.twitch.tv"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "tt_content",
+        "tt_medium"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "twitter",
+      "scope": "site",
+      "hosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "cxt",
+        "refsrc",
+        "s"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "wallstreetjournal",
+      "scope": "site",
+      "hosts": [
+        "www.wsj.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "reflink"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "wired",
+      "scope": "site",
+      "hosts": [
+        "www.wired.co.uk",
+        "www.wired.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "mbid"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "wise",
+      "scope": "site",
+      "hosts": [
+        "wise.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "adref",
+        "clickref",
+        "partnerid",
+        "partnerizecampaignid"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "yandex",
+      "scope": "site",
+      "hosts": [
+        "yandex.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "clid",
+        "did",
+        "from",
+        "mlid",
+        "msid",
+        "persistent_id",
+        "source-serpid",
+        "stid",
+        "suggest_reqid",
+        "utm-term"
+      ]
+    },
+    {
+      "source": "lgpl",
+      "group": "youtube",
+      "scope": "site",
+      "hosts": [
+        "m.youtube.com",
+        "www.youtube.com",
+        "youtu.be",
+        "youtube.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "feature",
+        "is",
+        "kw",
+        "pp",
+        "si"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "amazon",
+      "scope": "site",
+      "hosts": [
+        "www.amazon.ac",
+        "www.amazon.ae",
+        "www.amazon.ca",
+        "www.amazon.cn",
+        "www.amazon.co.jp",
+        "www.amazon.co.uk",
+        "www.amazon.co.za",
+        "www.amazon.com",
+        "www.amazon.com.au",
+        "www.amazon.com.be",
+        "www.amazon.com.br",
+        "www.amazon.com.mx",
+        "www.amazon.com.tr",
+        "www.amazon.de",
+        "www.amazon.eg",
+        "www.amazon.es",
+        "www.amazon.fr",
+        "www.amazon.ie",
+        "www.amazon.in",
+        "www.amazon.it",
+        "www.amazon.nl",
+        "www.amazon.pl",
+        "www.amazon.sa",
+        "www.amazon.se",
+        "www.amazon.sg",
+        "www.audible.ca",
+        "www.audible.co.jp",
+        "www.audible.co.uk",
+        "www.audible.com",
+        "www.audible.com.au",
+        "www.audible.com.br",
+        "www.audible.de",
+        "www.audible.es",
+        "www.audible.fr",
+        "www.audible.in",
+        "www.audible.it"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "__mk_de_de",
+        "aaxitk",
+        "content-id",
+        "creativeid",
+        "crid",
+        "dib",
+        "dib_tag",
+        "eac_id",
+        "eac_link",
+        "eac_selected",
+        "hsa_cr_id",
+        "ipredirectfrom",
+        "ipredirectoriginalurl",
+        "keywords",
+        "lp_asins",
+        "lp_query",
+        "lp_slot",
+        "overridebasecountry",
+        "pageloadid",
+        "pd_rd_plhdr",
+        "pd_rd_r",
+        "pd_rd_w",
+        "pd_rd_wg",
+        "pf_rd_p",
+        "pf_rd_r",
+        "plink",
+        "psc",
+        "ref",
+        "ref_",
+        "ref_pageloadid",
+        "s_prefix",
+        "sbo",
+        "social_share",
+        "source_code",
+        "sp_csd",
+        "sprefix",
+        "sr",
+        "store_ref"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "bilibili",
+      "scope": "site",
+      "hosts": [
+        "live.bilibili.com",
+        "space.bilibili.com",
+        "www.bilibili.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "broadcast_type",
+        "is_room_feed",
+        "live_from",
+        "spm_id_from"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "ebay",
+      "scope": "site",
+      "hosts": [],
+      "schemelessSites": [
+        "ebay.at",
+        "ebay.ba",
+        "ebay.be",
+        "ebay.ca",
+        "ebay.ch",
+        "ebay.cn",
+        "ebay.co.jp",
+        "ebay.co.kr",
+        "ebay.co.uk",
+        "ebay.com",
+        "ebay.com.au",
+        "ebay.com.hk",
+        "ebay.com.my",
+        "ebay.com.ph",
+        "ebay.com.sg",
+        "ebay.com.tw",
+        "ebay.de",
+        "ebay.es",
+        "ebay.fr",
+        "ebay.ie",
+        "ebay.it",
+        "ebay.nl",
+        "ebay.pl"
+      ],
+      "params": [
+        "customid",
+        "toolid"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "facebook",
+      "scope": "site",
+      "hosts": [
+        "www.facebook.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "__cft__[0]",
+        "__cft__%5b0%5d",
+        "__tn__"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "global",
+      "scope": "global",
+      "hosts": [],
+      "schemelessSites": [],
+      "params": [
+        "__hsfp",
+        "__hssc",
+        "__hstc",
+        "_branch_match_id",
+        "_bta_c",
+        "_bta_tid",
+        "_ga",
+        "_gl",
+        "_hsenc",
+        "_hsmi",
+        "_ke",
+        "_kx",
+        "adgroupid",
+        "adid",
+        "adtype",
+        "bg_aid_k",
+        "bg_aid_v",
+        "bg_campaign",
+        "bg_kw",
+        "bg_source",
+        "bg_source_id",
+        "channable",
+        "cq_cmp",
+        "cq_con",
+        "cq_med",
+        "cq_net",
+        "cq_plac",
+        "cq_plt",
+        "cq_src",
+        "cq_term",
+        "cto_pld",
+        "dm_i",
+        "ef_id",
+        "epik",
+        "fbadid",
+        "fbc_id",
+        "fbclid",
+        "gad_campaignid",
+        "gad_source",
+        "gadid",
+        "gbraid",
+        "gclid",
+        "gclsrc",
+        "gpromocode",
+        "gqt",
+        "h_ad_id",
+        "hsa_acc",
+        "hsa_ad",
+        "hsa_cam",
+        "hsa_grp",
+        "hsa_kw",
+        "hsa_la",
+        "hsa_mt",
+        "hsa_net",
+        "hsa_ol",
+        "hsa_src",
+        "hsa_tgt",
+        "hsa_ver",
+        "hsctatracking",
+        "im_ref",
+        "klar_adid",
+        "klar_cpid",
+        "klar_source",
+        "li_fat_id",
+        "matomo_campaign",
+        "matomo_cid",
+        "matomo_content",
+        "matomo_group",
+        "matomo_keyword",
+        "matomo_medium",
+        "matomo_placement",
+        "matomo_source",
+        "mc_cid",
+        "mc_eid",
+        "meta_placement",
+        "meta_site_source",
+        "mkwid",
+        "msclkid",
+        "mtm_campaign",
+        "mtm_cid",
+        "mtm_content",
+        "mtm_group",
+        "mtm_keyword",
+        "mtm_medium",
+        "mtm_placement",
+        "mtm_source",
+        "nb_adtype",
+        "nb_ap",
+        "nb_expid_meta",
+        "nb_fii",
+        "nb_klid",
+        "nb_kwd",
+        "nb_li_ms",
+        "nb_lp_ms",
+        "nb_mi",
+        "nb_mt",
+        "nb_pc",
+        "nb_pi",
+        "nb_placement",
+        "nb_ppi",
+        "nb_ti",
+        "nbt",
+        "ndclid",
+        "padid",
+        "pcrid",
+        "piwik_campaign",
+        "piwik_keyword",
+        "piwik_kwd",
+        "pk_campaign",
+        "pk_cid",
+        "pk_content",
+        "pk_keyword",
+        "pk_kwd",
+        "pk_medium",
+        "pk_source",
+        "pl_gc",
+        "redirect_log_mongo_id",
+        "redirect_mongo_id",
+        "rtbhc",
+        "rtid",
+        "s_cid",
+        "s_kwcid",
+        "sb_referer_host",
+        "scadid",
+        "sccid",
+        "srsltid",
+        "trk_contact",
+        "trk_module",
+        "trk_msg",
+        "trk_sid",
+        "ttadid",
+        "ttclid",
+        "tw_adid",
+        "tw_campaign",
+        "tw_content",
+        "tw_kwdid",
+        "tw_source",
+        "tw_term",
+        "twclid",
+        "utm_ad",
+        "utm_affiliate",
+        "utm_brand",
+        "utm_campaign",
+        "utm_campaignid",
+        "utm_channel",
+        "utm_cid",
+        "utm_content",
+        "utm_creative",
+        "utm_creative_format",
+        "utm_emcid",
+        "utm_emmid",
+        "utm_id",
+        "utm_id_",
+        "utm_keyword",
+        "utm_klaviyo_id",
+        "utm_marketing_tactic",
+        "utm_medium",
+        "utm_name",
+        "utm_place",
+        "utm_product",
+        "utm_pubreferrer",
+        "utm_reader",
+        "utm_referrer",
+        "utm_serial",
+        "utm_session",
+        "utm_siteid",
+        "utm_social",
+        "utm_social-type",
+        "utm_source",
+        "utm_source_platform",
+        "utm_supplier",
+        "utm_swu",
+        "utm_term",
+        "utm_umguk",
+        "utm_userid",
+        "utm_viz_id",
+        "var",
+        "vero_conv",
+        "wbraid",
+        "wt_mc",
+        "yclid",
+        "ymid"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "handelsblatt",
+      "scope": "site",
+      "hosts": [
+        "www.handelsblatt.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "share"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "humblebundle",
+      "scope": "site",
+      "hosts": [
+        "www.humblebundle.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "hmb_campaign",
+        "hmb_medium",
+        "hmb_source"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "instagram",
+      "scope": "site",
+      "hosts": [
+        "www.instagram.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "ig_rid",
+        "igshid"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "linkedin",
+      "scope": "site",
+      "hosts": [
+        "www.linkedin.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "rcm"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "meetup",
+      "scope": "site",
+      "hosts": [
+        "www.meetup.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "eventorigin",
+        "recid",
+        "recsource",
+        "searchid"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "shopee",
+      "scope": "site",
+      "hosts": [
+        "shopee.cl",
+        "shopee.co.id",
+        "shopee.co.vn",
+        "shopee.com.br",
+        "shopee.com.co",
+        "shopee.com.mx",
+        "shopee.com.my",
+        "shopee.ph",
+        "shopee.sg",
+        "shopee.tw",
+        "shopee.vn"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "sp_atk",
+        "xptdk"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "spotify",
+      "scope": "site",
+      "hosts": [
+        "open.spotify.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "si"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "tokopedia",
+      "scope": "site",
+      "hosts": [
+        "www.tokopedia.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "extparam"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "twitter",
+      "scope": "site",
+      "hosts": [
+        "twitter.com",
+        "www.twitter.com",
+        "x.com"
+      ],
+      "schemelessSites": [],
+      "params": [
+        "ref_src",
+        "ref_url"
+      ]
+    },
+    {
+      "source": "mpl",
+      "group": "wikimedia",
+      "scope": "site",
+      "hosts": [
+        "test.wikidata.org",
+        "w.wiki",
+        "www.wikidata.org",
+        "www.wikifunctions.org"
+      ],
+      "schemelessSites": [
+        "mediawiki.org",
+        "wikimedia.org",
+        "wikipedia.org"
+      ],
+      "params": [
+        "wprov"
+      ]
+    }
+  ]
+}
