@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         UTM Stripper
 // @namespace    https://github.com/perennialtech/utm-stripper
-// @version      0.2.0
-// @description  Remove UTM and known click-tracking parameters from links and common page requests.
+// @version      0.3.0
+// @description  Strip common tracking query parameters using global and host-specific rules.
 // @author       perennialtech
 // @match        http://*/*
 // @match        https://*/*
@@ -16,26 +16,96 @@
 (() => {
   'use strict';
 
-  // Known tracking-only query parameters from advertising, social sharing,
-  // analytics, and email campaigns. Do not add ambiguous keys such as
-  // "ref", "source", "id", "tag", "si", or "feature" here: websites may need them.
-  const TRACKING_PARAMS = new Set([
+  // Curated from Firefox's current navigation and Strip-on-Share lists (2026-10-23):
+  // https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/query-stripping/records
+  // https://searchfox.org/firefox-main/source/toolkit/components/antitracking/StripOnShareLists/
+  // Only high-confidence tracking keys are global. Ambiguous names like
+  // ref, source, id, tag, si, s and feature MUST NOT be stripped globally.
+  const GLOBAL_TRACKING_PARAMS = new Set([
     // Ad click IDs and social link decoration.
     'fbclid', 'igshid', 'gclid', 'dclid', 'gbraid', 'wbraid',
     'msclkid', 'ttclid', 'twclid', 'yclid', 'li_fat_id',
-    'srsltid', 'epik', 'gad_source',
+    'srsltid', 'epik', 'gad_source', 'ndclid', 'gclsrc',
 
     // Analytics and marketing-email identifiers.
     '_gl', '_ga', 'mc_cid', 'mc_eid', 'mkt_tok',
     '_hsenc', '_hsmi', 'vero_id', 'vero_conv',
-    'oly_anon_id', 'oly_enc_id',
+    'oly_anon_id', 'oly_enc_id', '__s', '_openstat',
+    'wickedid', 'ysclid', '__hsfp', '__hssc', '__hstc',
+    'hsctatracking', '_branch_match_id', 'ymid', 's_cid', 'wt_mc',
+
+    // Distinctive campaign tags used by Matomo/Piwik and HubSpot.
+    'matomo_campaign', 'matomo_cid', 'matomo_content', 'matomo_group',
+    'matomo_keyword', 'matomo_medium', 'matomo_placement', 'matomo_source',
+    'mtm_campaign', 'mtm_cid', 'mtm_content', 'mtm_group',
+    'mtm_keyword', 'mtm_medium', 'mtm_placement', 'mtm_source',
+    'pk_campaign', 'pk_cid', 'pk_content', 'pk_keyword', 'pk_kwd',
+    'pk_medium', 'pk_source', 'piwik_campaign', 'piwik_keyword', 'piwik_kwd',
+    'hsa_acc', 'hsa_ad', 'hsa_cam', 'hsa_grp', 'hsa_kw',
+    'hsa_la', 'hsa_mt', 'hsa_net', 'hsa_ol', 'hsa_src',
+    'hsa_tgt', 'hsa_ver',
   ]);
+
+  // Exact host matching avoids leaking rules to unrelated domains or
+  // subdomains. These are deliberately curated SUBSETS of Firefox's
+  // per-site rules, not automatic imports of its entire lists.
+  const SITE_RULES = [
+    {
+      hosts: ['x.com', 'www.x.com', 'twitter.com', 'www.twitter.com'],
+      params: ['ref_src', 'ref_url', 'refsrc', 'cxt', 's'],
+    },
+    {
+      hosts: ['www.instagram.com', 'instagram.com'],
+      params: ['ig_rid'],
+    },
+    {
+      hosts: ['www.youtube.com', 'youtube.com', 'm.youtube.com', 'youtu.be'],
+      params: ['si'],
+    },
+    {
+      hosts: ['www.reddit.com', 'reddit.com', 'old.reddit.com', 'new.reddit.com'],
+      params: ['ref_source', 'ref_campaign', 'correlation_id', 'share_id'],
+    },
+    {
+      hosts: ['open.spotify.com'],
+      params: ['si'],
+    },
+    {
+      hosts: ['www.amazon.com', 'amazon.com', 'www.amazon.co.uk', 'amazon.co.uk',
+        'www.amazon.com.au', 'amazon.com.au', 'www.amazon.ca', 'amazon.ca',
+        'www.amazon.de', 'amazon.de', 'www.amazon.fr', 'amazon.fr',
+        'www.amazon.co.jp', 'amazon.co.jp', 'www.amazon.in', 'amazon.in',
+        'www.amazon.it', 'amazon.it', 'www.amazon.es', 'amazon.es',
+        'www.amazon.com.br', 'amazon.com.br', 'www.amazon.com.mx', 'amazon.com.mx',
+        'www.amazon.nl', 'amazon.nl', 'www.amazon.pl', 'amazon.pl',
+        'www.amazon.sg', 'amazon.sg'],
+      params: ['pd_rd_r', 'pd_rd_w', 'pd_rd_wg', 'pd_rd_plhdr',
+        'pf_rd_r', 'pf_rd_p', 'ref_pageloadid', 'ref_', 'social_share'],
+    },
+    {
+      hosts: ['www.bilibili.com', 'space.bilibili.com', 'live.bilibili.com'],
+      params: ['spm_id_from'],
+    },
+    {
+      hosts: ['www.facebook.com', 'facebook.com'],
+      params: ['mibextid'],
+    },
+  ];
+
+  const siteTrackingParams = new Map();
+  for (const { hosts, params } of SITE_RULES) {
+    for (const host of hosts) {
+      const names = siteTrackingParams.get(host) || new Set();
+      for (const name of params) names.add(name.toLowerCase());
+      siteTrackingParams.set(host, names);
+    }
+  }
 
   // Edit these arrays to add a custom exact parameter name or exempt a
   // parameter that a particular site needs. Matching is case-insensitive.
   const ADDITIONAL_PARAMS = [];
   const PRESERVE_PARAMS = [];
-  for (const name of ADDITIONAL_PARAMS) TRACKING_PARAMS.add(name.toLowerCase());
+  for (const name of ADDITIONAL_PARAMS) GLOBAL_TRACKING_PARAMS.add(name.toLowerCase());
   const preserveParams = new Set(PRESERVE_PARAMS.map(name => name.toLowerCase()));
 
   // Return the original value unchanged when there is nothing to remove.
@@ -52,11 +122,13 @@
 
     if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return value;
 
+    const siteParams = siteTrackingParams.get(parsed.hostname.toLowerCase());
     let removed = false;
     for (const key of [...parsed.searchParams.keys()]) {
       const normalized = key.toLowerCase();
       if (!preserveParams.has(normalized) &&
-          (normalized.startsWith('utm_') || TRACKING_PARAMS.has(normalized))) {
+          (normalized.startsWith('utm_') || GLOBAL_TRACKING_PARAMS.has(normalized) ||
+            siteParams?.has(normalized))) {
         parsed.searchParams.delete(key);
         removed = true;
       }

@@ -24,26 +24,49 @@ https://example.com/article?utm_source=newsletter&fbclid=abc123&id=123#intro
 https://example.com/article?id=123#intro
 ```
 
-It removes any parameter whose **decoded name starts with `utm_`**, including uppercase forms and custom names like `utm_custom`, plus a small, explicit list of known tracking keys:
+It removes any parameter whose **decoded name starts with `utm_`**, including uppercase forms and custom names like `utm_custom`, plus reviewed tracking keys:
 
 | Category | Parameters |
 | --- | --- |
-| Advertising and social | `fbclid`, `igshid`, `gclid`, `dclid`, `gbraid`, `wbraid`, `msclkid`, `ttclid`, `twclid`, `yclid`, `li_fat_id`, `srsltid`, `epik`, `gad_source` |
-| Analytics | `_gl`, `_ga` |
-| Email marketing | `mc_cid`, `mc_eid`, `mkt_tok`, `_hsenc`, `_hsmi`, `vero_id`, `vero_conv`, `oly_anon_id`, `oly_enc_id` |
+| Advertising and social | `fbclid`, `igshid`, `gclid`, `dclid`, `gbraid`, `wbraid`, `msclkid`, `ttclid`, `twclid`, `yclid`, `li_fat_id`, `srsltid`, `epik`, `gad_source`, `ysclid`, `wickedid`, `ndclid` |
+| Analytics | `_gl`, `_ga`, `__s`, `__hssc`, `__hstc`, `__hsfp`, `hsctatracking`, `matomo_campaign`, `mtm_source`, `pk_campaign` (and other specific campaign keys) |
+| Email marketing | `mc_cid`, `mc_eid`, `mkt_tok`, `_hsenc`, `_hsmi`, `vero_id`, `vero_conv`, `oly_anon_id`, `oly_enc_id`, `_openstat` |
 
-Names are matched **exactly** except for the `utm_` prefix. Unknown or potentially functional parameters such as `id`, `ref`, `source`, `tag`, `si`, `feature`, `q`, and `token` are left alone.
+Names are matched **exactly** except for the `utm_` prefix. Unknown or potentially functional parameters such as `id`, `ref`, `source`, `tag`, `feature`, `q`, and `token` are left alone by default.
+
+### Site-specific cleanup
+
+Some short parameter names are too ambiguous to strip everywhere. They are removed **only when the destination URL has a known matching hostname**, such as:
+
+| Destination | Parameters removed there |
+| --- | --- |
+| X / Twitter | `s`, `cxt`, `refsrc`, `ref_src`, `ref_url` |
+| YouTube | `si` |
+| Spotify | `si` |
+| Amazon (selected country domains, including `.com.au`) | `pd_rd_r`, `pd_rd_w`, `pd_rd_wg`, `pf_rd_r`, `pf_rd_p`, `ref_` and related decoration |
+| Reddit | `ref_source`, `ref_campaign`, `correlation_id`, `share_id` |
+| Instagram, Facebook, Bilibili | Selected sharing and referral IDs |
+
+For example, `s=20` is removed from a link to `x.com` but **kept** on `example.com`; `si` is removed from YouTube/Spotify links but preserved everywhere else. Host checks are exact, so `x.com.evil.example` does not get X-specific rules. Fields like Amazon's `th`, `psc`, `tag`, and generic `ref` are deliberately preserved.
 
 ### Customising the list
 
 At the beginning of `utm-stripper.user.js` you can edit two arrays:
 
 - `ADDITIONAL_PARAMS` — extra exact parameter names to strip, e.g. `['my_tracking_id']`.
-- `PRESERVE_PARAMS` — exact parameter names to keep, even if included in the built-in list, e.g. `['gclid']`.
+- `PRESERVE_PARAMS` — exact parameter names to keep, even if included in global **or site-specific** lists, e.g. `['gclid', 'si']`.
 
 Editing the installed script locally may be overwritten by future automatic updates. If you need permanent custom rules, maintain your own copy. Although these identifiers are generally used for tracking, removing them can interfere with some advertising, attribution, login, or site-specific flows.
 
-This is a deliberately small allowlist of **parameters to remove**, rather than indiscriminately deleting unfamiliar query keys. For more comprehensive filtering, see [Firefox's query stripping documentation](https://firefox-source-docs.mozilla.org/toolkit/components/antitracking/anti-tracking/query-stripping/index.html) and [AdGuard's URL Tracking filter](https://adguard.com/en/blog/adguard-url-tracking-filter.html).
+### Sources and maintenance
+
+The bundled list was reviewed against **Firefox source and live Remote Settings rules on 23 October 2026**, not just the (partly outdated) Firefox query-stripping documentation:
+
+- [Firefox's live Remote Settings query-stripping collection](https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/query-stripping/records)
+- [Firefox Strip-on-Share rules (MPL 2.0)](https://searchfox.org/firefox-main/source/toolkit/components/antitracking/StripOnShareLists/MPL2/StripOnShare.json)
+- [Additional Strip-on-Share rules (LGPL)](https://searchfox.org/firefox-main/source/toolkit/components/antitracking/StripOnShareLists/LGPL/StripOnShareLGPL.json)
+
+This is a **manually curated subset** of the lists, not a vendored copy or a live feed. Firefox's own rules also have different applicability and exception handling. Automatically importing every Firefox rule (especially short names like `s`, `ref`, or `var`) into a userscript that rewrites page requests could break websites. Add new rules only after checking their intended scope and adding tests for both matching and nonmatching websites.
 
 ## Limits you should know
 
