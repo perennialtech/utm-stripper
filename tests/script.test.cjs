@@ -5,7 +5,7 @@ const vm = require('node:vm');
 
 const source = fs.readFileSync(new URL('../utm-stripper.user.js', `file://${__filename}`), 'utf8');
 
-function createPage(url = 'https://example.test/?utm_source=mail&id=1#top') {
+function createPage(url = 'https://example.test/?utm_source=mail&id=1#top', script = source) {
   const calls = { fetch: [], xhr: [], beacon: [], open: [], history: [] };
   const handlers = new Map();
   const location = { href: url };
@@ -36,7 +36,7 @@ function createPage(url = 'https://example.test/?utm_source=mail&id=1#top') {
     async fetch(...args) { calls.fetch.push(args); return { ok: true }; },
   };
   page.window = page;
-  vm.runInNewContext(source, page, { filename: 'utm-stripper.user.js' });
+  vm.runInNewContext(script, page, { filename: 'utm-stripper.user.js' });
   return { page, calls, handlers };
 }
 
@@ -101,4 +101,39 @@ test('preserves POST method, headers and body for fetch(Request)', async () => {
   assert.equal(rewritten.headers.get('X-Test'), 'present');
   assert.equal(await rewritten.text(), 'hello world');
   // Like native fetch(Request), constructing a replacement may consume the original body stream.
+});
+
+test('removes common advertising and social tracking keys, preserving regular parameters', async () => {
+  const { page, calls } = createPage('https://example.test/?id=1');
+  await page.fetch('https://example.test/story?FBCLID=one&gclid=two&msclkid=three&ttclid=four&igshid=five&srsltid=six&epik=seven&ref=needed&si=useful');
+  assert.equal(calls.fetch[0][0], 'https://example.test/story?ref=needed&si=useful');
+  assert.equal(page.location.href, 'https://example.test/?id=1');
+});
+
+test('removes email and analytics tracking keys', async () => {
+  const { page, calls } = createPage();
+  await page.fetch('/?MC_EID=abc&mkt_tok=def&_hsenc=ghi&vero_id=123&_gl=a1&token=real');
+  assert.equal(calls.fetch[0][0], 'https://example.test/?token=real');
+});
+
+test('removes repeated and percent-encoded tracking key names', async () => {
+  const { page, calls } = createPage();
+  await page.fetch('/?%66bclid=one&fbclid=two&UTM_SOURCE=three&utm_source=four&k=1');
+  assert.equal(calls.fetch[0][0], 'https://example.test/?k=1');
+});
+
+test('does not remove ambiguous parameters used by real websites', async () => {
+  const { page, calls } = createPage();
+  const url = '/?ref=abc&source=internal&tag=aff&id=42&si=share&feature=related&q=geese&token=abc&campaign=buy&clickid=something';
+  await page.fetch(url);
+  assert.equal(calls.fetch[0][0], url);
+});
+
+test('custom additions and preserve exceptions override the defaults', async () => {
+  const customized = source
+    .replace('const ADDITIONAL_PARAMS = [];', "const ADDITIONAL_PARAMS = ['My_Tracking'];")
+    .replace('const PRESERVE_PARAMS = [];', "const PRESERVE_PARAMS = ['UTM_SOURCE', 'gclid'];");
+  const { page, calls } = createPage('https://example.test/?id=1', customized);
+  await page.fetch('/?my_tracking=abc&UTM_SOURCE=keep&gclid=keep&fbclid=remove&x=2');
+  assert.equal(calls.fetch[0][0], 'https://example.test/?UTM_SOURCE=keep&gclid=keep&x=2');
 });

@@ -1,8 +1,8 @@
 {
   "name": "utm-stripper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Violentmonkey userscript to strip UTM tracking parameters",
+  "description": "Violentmonkey userscript to strip UTM and known tracking parameters",
   "scripts": {
     "test": "node --test"
   }
