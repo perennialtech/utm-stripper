@@ -5,6 +5,13 @@ const vm = require('node:vm');
 
 const source = fs.readFileSync(new URL('../utm-stripper.user.js', `file://${__filename}`), 'utf8');
 
+test('userscript metadata matches the package version', () => {
+  const pkg = require('../package.json');
+  const match = source.match(/^\/\/ @version\s+(\d+\.\d+\.\d+)$/m);
+  assert.ok(match, 'userscript must declare a semantic version');
+  assert.equal(match[1], pkg.version);
+});
+
 function createPage(url = 'https://example.test/?utm_source=mail&id=1#top', script = source) {
   const calls = { fetch: [], xhr: [], beacon: [], open: [], history: [] };
   const handlers = new Map();

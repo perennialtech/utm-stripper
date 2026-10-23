@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UTM Stripper
 // @namespace    https://github.com/perennialtech/utm-stripper
-// @version      0.3.0
+// @version      0.4.0
 // @description  Strip common tracking query parameters using global and host-specific rules.
 // @author       perennialtech
 // @match        http://*/*
