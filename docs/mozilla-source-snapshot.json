@@ -685,11 +685,10 @@
       "source": "lgpl",
       "group": "linkedin",
       "scope": "site",
-      "hosts": [
-        "ca.linkedin.com",
-        "ro.linkedin.com"
+      "hosts": [],
+      "schemelessSites": [
+        "linkedin.com"
       ],
-      "schemelessSites": [],
       "params": [
         "refid",
         "trackingid",
@@ -1296,11 +1295,16 @@
       "source": "mpl",
       "group": "linkedin",
       "scope": "site",
-      "hosts": [
-        "www.linkedin.com"
+      "hosts": [],
+      "schemelessSites": [
+        "linkedin.com"
       ],
-      "schemelessSites": [],
       "params": [
+        "alternatechannel",
+        "ebp",
+        "isjobsearch",
+        "lipi",
+        "origin",
         "rcm"
       ]
     },
