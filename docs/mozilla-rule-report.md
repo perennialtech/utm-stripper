@@ -2,19 +2,19 @@
 
 **Draft PR for human review; no automatic merge.** This is an inventory-only proposal. No userscript rules are changed or activated by the automation.
 
-Snapshot fingerprint: 19785c965c0a. Sources are compared semantically, with stable sorting and no run timestamps.
+Snapshot fingerprint: b1c096063cb0. Sources are compared semantically, with stable sorting and no run timestamps.
 
 ## Coverage and risk
 
 | Classification | Source parameter entries | Treatment |
 | --- | ---: | --- |
-| Already covered | 146 | Existing stripping behaviour |
-| Low risk (heuristic) | 28 | Advisory candidates only; requires separate compatibility-tested implementation |
-| Needs review | 285 | Explicitly represented in manifest; not enabled |
-| High risk | 52 | Potentially functional, represented but not enabled |
-| Unsupported scope | 3 | Source scope retained verbatim; not enabled |
+| Already covered | 132 | Existing stripping behaviour |
+| Low risk (heuristic) | 0 | Advisory candidates only; requires separate compatibility-tested implementation |
+| Needs review | 93 | Explicitly represented in manifest; not enabled |
+| High risk | 0 | Potentially functional, represented but not enabled |
+| Unsupported scope | 296 | Source scope retained verbatim; not enabled |
 
-Total: **514** source parameter entries. Includes repeated names across independent Mozilla sources/groups.
+Total: **521** source parameter entries. Includes repeated names across independent Mozilla sources/groups.
 
 ## Source links
 
@@ -24,9 +24,19 @@ Total: **514** source parameter entries. Includes repeated names across independ
 
 ## Changes since accepted baseline
 
-Initial baseline: inventories all currently published rules.
+- Added: **7** entries; removed: **0**; changed host/exception scope: **290**; changed allowlist configuration: **no**
 
 ### added
+
+- `mpl/global/_su_rec`
+- `mpl/global/_su_rec_id`
+- `mpl/linkedin/alternatechannel`
+- `mpl/linkedin/ebp`
+- `mpl/linkedin/isjobsearch`
+- `mpl/linkedin/lipi`
+- `mpl/linkedin/origin`
+
+### changedScope
 
 - `lgpl/aliexpress/aff_fcid`
 - `lgpl/aliexpress/aff_fsk`
@@ -152,23 +162,6 @@ Initial baseline: inventories all currently published rules.
 - `lgpl/forbes/sh`
 - `lgpl/github/email_source`
 - `lgpl/github/email_token`
-- `lgpl/global/at_campaign`
-- `lgpl/global/at_campaign_type`
-- `lgpl/global/at_creation`
-- `lgpl/global/at_emailtype`
-- `lgpl/global/at_link`
-- `lgpl/global/at_link_id`
-- `lgpl/global/at_link_origin`
-- `lgpl/global/at_link_type`
-- `lgpl/global/at_medium`
-- `lgpl/global/at_ptr_name`
-- `lgpl/global/at_recipient_id`
-- `lgpl/global/at_recipient_list`
-- `lgpl/global/at_send_date`
-- `lgpl/global/utm_campaign_id`
-- `lgpl/global/utm_email`
-- `lgpl/global/utm_email_id`
-- `lgpl/global/utm_newsletter_id`
 - `lgpl/google/aqs`
 - `lgpl/google/bih`
 - `lgpl/google/biw`
@@ -314,193 +307,9 @@ Initial baseline: inventories all currently published rules.
 - `mpl/bilibili/is_room_feed`
 - `mpl/bilibili/live_from`
 - `mpl/bilibili/spm_id_from`
-- `mpl/ebay/customid`
-- `mpl/ebay/toolid`
 - `mpl/facebook/__cft__[0]`
 - `mpl/facebook/__cft__%5b0%5d`
 - `mpl/facebook/__tn__`
-- `mpl/global/__hsfp`
-- `mpl/global/__hssc`
-- `mpl/global/__hstc`
-- `mpl/global/_branch_match_id`
-- `mpl/global/_bta_c`
-- `mpl/global/_bta_tid`
-- `mpl/global/_ga`
-- `mpl/global/_gl`
-- `mpl/global/_hsenc`
-- `mpl/global/_hsmi`
-- `mpl/global/_ke`
-- `mpl/global/_kx`
-- `mpl/global/adgroupid`
-- `mpl/global/adid`
-- `mpl/global/adtype`
-- `mpl/global/bg_aid_k`
-- `mpl/global/bg_aid_v`
-- `mpl/global/bg_campaign`
-- `mpl/global/bg_kw`
-- `mpl/global/bg_source`
-- `mpl/global/bg_source_id`
-- `mpl/global/channable`
-- `mpl/global/cq_cmp`
-- `mpl/global/cq_con`
-- `mpl/global/cq_med`
-- `mpl/global/cq_net`
-- `mpl/global/cq_plac`
-- `mpl/global/cq_plt`
-- `mpl/global/cq_src`
-- `mpl/global/cq_term`
-- `mpl/global/cto_pld`
-- `mpl/global/dm_i`
-- `mpl/global/ef_id`
-- `mpl/global/epik`
-- `mpl/global/fbadid`
-- `mpl/global/fbc_id`
-- `mpl/global/fbclid`
-- `mpl/global/gad_campaignid`
-- `mpl/global/gad_source`
-- `mpl/global/gadid`
-- `mpl/global/gbraid`
-- `mpl/global/gclid`
-- `mpl/global/gclsrc`
-- `mpl/global/gpromocode`
-- `mpl/global/gqt`
-- `mpl/global/h_ad_id`
-- `mpl/global/hsa_acc`
-- `mpl/global/hsa_ad`
-- `mpl/global/hsa_cam`
-- `mpl/global/hsa_grp`
-- `mpl/global/hsa_kw`
-- `mpl/global/hsa_la`
-- `mpl/global/hsa_mt`
-- `mpl/global/hsa_net`
-- `mpl/global/hsa_ol`
-- `mpl/global/hsa_src`
-- `mpl/global/hsa_tgt`
-- `mpl/global/hsa_ver`
-- `mpl/global/hsctatracking`
-- `mpl/global/im_ref`
-- `mpl/global/klar_adid`
-- `mpl/global/klar_cpid`
-- `mpl/global/klar_source`
-- `mpl/global/li_fat_id`
-- `mpl/global/matomo_campaign`
-- `mpl/global/matomo_cid`
-- `mpl/global/matomo_content`
-- `mpl/global/matomo_group`
-- `mpl/global/matomo_keyword`
-- `mpl/global/matomo_medium`
-- `mpl/global/matomo_placement`
-- `mpl/global/matomo_source`
-- `mpl/global/mc_cid`
-- `mpl/global/mc_eid`
-- `mpl/global/meta_placement`
-- `mpl/global/meta_site_source`
-- `mpl/global/mkwid`
-- `mpl/global/msclkid`
-- `mpl/global/mtm_campaign`
-- `mpl/global/mtm_cid`
-- `mpl/global/mtm_content`
-- `mpl/global/mtm_group`
-- `mpl/global/mtm_keyword`
-- `mpl/global/mtm_medium`
-- `mpl/global/mtm_placement`
-- `mpl/global/mtm_source`
-- `mpl/global/nb_adtype`
-- `mpl/global/nb_ap`
-- `mpl/global/nb_expid_meta`
-- `mpl/global/nb_fii`
-- `mpl/global/nb_klid`
-- `mpl/global/nb_kwd`
-- `mpl/global/nb_li_ms`
-- `mpl/global/nb_lp_ms`
-- `mpl/global/nb_mi`
-- `mpl/global/nb_mt`
-- `mpl/global/nb_pc`
-- `mpl/global/nb_pi`
-- `mpl/global/nb_placement`
-- `mpl/global/nb_ppi`
-- `mpl/global/nb_ti`
-- `mpl/global/nbt`
-- `mpl/global/ndclid`
-- `mpl/global/padid`
-- `mpl/global/pcrid`
-- `mpl/global/piwik_campaign`
-- `mpl/global/piwik_keyword`
-- `mpl/global/piwik_kwd`
-- `mpl/global/pk_campaign`
-- `mpl/global/pk_cid`
-- `mpl/global/pk_content`
-- `mpl/global/pk_keyword`
-- `mpl/global/pk_kwd`
-- `mpl/global/pk_medium`
-- `mpl/global/pk_source`
-- `mpl/global/pl_gc`
-- `mpl/global/redirect_log_mongo_id`
-- `mpl/global/redirect_mongo_id`
-- `mpl/global/rtbhc`
-- `mpl/global/rtid`
-- `mpl/global/s_cid`
-- `mpl/global/s_kwcid`
-- `mpl/global/sb_referer_host`
-- `mpl/global/scadid`
-- `mpl/global/sccid`
-- `mpl/global/srsltid`
-- `mpl/global/trk_contact`
-- `mpl/global/trk_module`
-- `mpl/global/trk_msg`
-- `mpl/global/trk_sid`
-- `mpl/global/ttadid`
-- `mpl/global/ttclid`
-- `mpl/global/tw_adid`
-- `mpl/global/tw_campaign`
-- `mpl/global/tw_content`
-- `mpl/global/tw_kwdid`
-- `mpl/global/tw_source`
-- `mpl/global/tw_term`
-- `mpl/global/twclid`
-- `mpl/global/utm_ad`
-- `mpl/global/utm_affiliate`
-- `mpl/global/utm_brand`
-- `mpl/global/utm_campaign`
-- `mpl/global/utm_campaignid`
-- `mpl/global/utm_channel`
-- `mpl/global/utm_cid`
-- `mpl/global/utm_content`
-- `mpl/global/utm_creative`
-- `mpl/global/utm_creative_format`
-- `mpl/global/utm_emcid`
-- `mpl/global/utm_emmid`
-- `mpl/global/utm_id`
-- `mpl/global/utm_id_`
-- `mpl/global/utm_keyword`
-- `mpl/global/utm_klaviyo_id`
-- `mpl/global/utm_marketing_tactic`
-- `mpl/global/utm_medium`
-- `mpl/global/utm_name`
-- `mpl/global/utm_place`
-- `mpl/global/utm_product`
-- `mpl/global/utm_pubreferrer`
-- `mpl/global/utm_reader`
-- `mpl/global/utm_referrer`
-- `mpl/global/utm_serial`
-- `mpl/global/utm_session`
-- `mpl/global/utm_siteid`
-- `mpl/global/utm_social`
-- `mpl/global/utm_social-type`
-- `mpl/global/utm_source`
-- `mpl/global/utm_source_platform`
-- `mpl/global/utm_supplier`
-- `mpl/global/utm_swu`
-- `mpl/global/utm_term`
-- `mpl/global/utm_umguk`
-- `mpl/global/utm_userid`
-- `mpl/global/utm_viz_id`
-- `mpl/global/var`
-- `mpl/global/vero_conv`
-- `mpl/global/wbraid`
-- `mpl/global/wt_mc`
-- `mpl/global/yclid`
-- `mpl/global/ymid`
 - `mpl/handelsblatt/share`
 - `mpl/humblebundle/hmb_campaign`
 - `mpl/humblebundle/hmb_medium`
@@ -519,35 +328,12 @@ Initial baseline: inventories all currently published rules.
 - `mpl/twitter/ref_src`
 - `mpl/twitter/ref_url`
 - `mpl/wikimedia/wprov`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/__s`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/_hsenc`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/fbclid`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/mc_eid`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/mkt_tok`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/oly_anon_id`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/oly_enc_id`
-- `remote/76495cfc-fac9-4079-9b5f-9ff0784484de/vero_id`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hsfp`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hssc`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/__hstc`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/_hsenc`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/_openstat`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/dclid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/gbraid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/gclid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/hsctatracking`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/msclkid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/twclid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/wbraid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/wickedid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/yclid`
-- `remote/85078bad-f31e-4d93-bb8a-81088b25d6dd/ysclid`
 
 ## Advisory candidates (not enabled)
 
 Potential global navigation keys: _None_.
 
-Potential host-scoped groups: **5** spanning **41** distinct exact hosts and **645** host/parameter pairs. These are suggestions, **not changes to live stripping**.
+Potential host-scoped groups: **0** spanning **0** distinct exact hosts and **0** host/parameter pairs. These are suggestions, **not changes to live stripping**.
 
 All remaining Strip-on-Share entries are recorded in the manifest, including every unsupported hostname and high-risk parameter.
 

@@ -54,12 +54,10 @@
       "source": "lgpl",
       "group": "aliexpress",
       "scope": "site",
-      "hosts": [
-        "ar.aliexpress.com",
-        "robotime.aliexpress.com",
-        "www.aliexpress.com"
+      "hosts": [],
+      "schemelessSites": [
+        "aliexpress.com"
       ],
-      "schemelessSites": [],
       "params": [
         "aff_fcid",
         "aff_fsk",
@@ -88,44 +86,45 @@
       "group": "amazon",
       "scope": "site",
       "hosts": [
-        "www.amazon.ac",
-        "www.amazon.ae",
-        "www.amazon.ca",
-        "www.amazon.cn",
-        "www.amazon.co.jp",
-        "www.amazon.co.uk",
-        "www.amazon.co.za",
-        "www.amazon.com",
-        "www.amazon.com.au",
-        "www.amazon.com.be",
-        "www.amazon.com.br",
-        "www.amazon.com.mx",
-        "www.amazon.com.tr",
-        "www.amazon.de",
-        "www.amazon.eg",
-        "www.amazon.es",
-        "www.amazon.fr",
-        "www.amazon.ie",
-        "www.amazon.in",
-        "www.amazon.it",
-        "www.amazon.nl",
-        "www.amazon.pl",
-        "www.amazon.sa",
-        "www.amazon.se",
-        "www.amazon.sg",
-        "www.audible.ca",
-        "www.audible.co.jp",
-        "www.audible.co.uk",
-        "www.audible.com",
-        "www.audible.com.au",
-        "www.audible.com.br",
-        "www.audible.de",
-        "www.audible.es",
-        "www.audible.fr",
-        "www.audible.in",
-        "www.audible.it"
+        "www.amazon.com.be"
       ],
-      "schemelessSites": [],
+      "schemelessSites": [
+        "amazon.ac",
+        "amazon.ae",
+        "amazon.ca",
+        "amazon.cn",
+        "amazon.co.jp",
+        "amazon.co.uk",
+        "amazon.co.za",
+        "amazon.com",
+        "amazon.com.au",
+        "amazon.com.br",
+        "amazon.com.mx",
+        "amazon.com.tr",
+        "amazon.de",
+        "amazon.eg",
+        "amazon.es",
+        "amazon.fr",
+        "amazon.ie",
+        "amazon.in",
+        "amazon.it",
+        "amazon.nl",
+        "amazon.pl",
+        "amazon.sa",
+        "amazon.se",
+        "amazon.sg",
+        "audible.ca",
+        "audible.co.jp",
+        "audible.co.uk",
+        "audible.com",
+        "audible.com.au",
+        "audible.com.br",
+        "audible.de",
+        "audible.es",
+        "audible.fr",
+        "audible.in",
+        "audible.it"
+      ],
       "params": [
         "_encoding",
         "adgrpid",
@@ -168,10 +167,10 @@
       "source": "lgpl",
       "group": "bbc",
       "scope": "site",
-      "hosts": [
-        "www.bbc.com"
+      "hosts": [],
+      "schemelessSites": [
+        "bbc.com"
       ],
-      "schemelessSites": [],
       "params": [
         "at_bbc_team",
         "facebook_page",
@@ -188,10 +187,10 @@
       "source": "lgpl",
       "group": "bestbuy",
       "scope": "site",
-      "hosts": [
-        "www.bestbuy.com"
+      "hosts": [],
+      "schemelessSites": [
+        "bestbuy.com"
       ],
-      "schemelessSites": [],
       "params": [
         "acampid",
         "intl",
@@ -205,10 +204,10 @@
       "source": "lgpl",
       "group": "bing",
       "scope": "site",
-      "hosts": [
-        "www.bing.com"
+      "hosts": [],
+      "schemelessSites": [
+        "bing.com"
       ],
-      "schemelessSites": [],
       "params": [
         "cvid",
         "form",
@@ -223,10 +222,10 @@
       "source": "lgpl",
       "group": "bloomberg",
       "scope": "site",
-      "hosts": [
-        "www.bloomberg.com"
+      "hosts": [],
+      "schemelessSites": [
+        "bloomberg.com"
       ],
-      "schemelessSites": [],
       "params": [
         "leadsource",
         "sref",
@@ -237,14 +236,12 @@
       "source": "lgpl",
       "group": "carousell",
       "scope": "site",
-      "hosts": [
-        "au.carousell.com",
-        "ca.carousell.com",
-        "us.carousell.com",
-        "www.carousell.com.hk",
-        "www.carousell.sg"
+      "hosts": [],
+      "schemelessSites": [
+        "carousell.com",
+        "carousell.com.hk",
+        "carousell.sg"
       ],
-      "schemelessSites": [],
       "params": [
         "referrer_category_id",
         "referrer_page_type",
@@ -263,10 +260,10 @@
       "source": "lgpl",
       "group": "cnet",
       "scope": "site",
-      "hosts": [
-        "www.cnet.com"
+      "hosts": [],
+      "schemelessSites": [
+        "cnet.com"
       ],
-      "schemelessSites": [],
       "params": [
         "ftag"
       ]
@@ -275,12 +272,11 @@
       "source": "lgpl",
       "group": "cnn",
       "scope": "site",
-      "hosts": [
-        "edition.cnn.com",
-        "www.cnn.co.jp",
-        "www.cnn.com"
+      "hosts": [],
+      "schemelessSites": [
+        "cnn.co.jp",
+        "cnn.com"
       ],
-      "schemelessSites": [],
       "params": [
         "ref"
       ]
@@ -289,11 +285,11 @@
       "source": "lgpl",
       "group": "ebay",
       "scope": "site",
-      "hosts": [
-        "www.ebay.co.uk",
-        "www.ebay.com"
+      "hosts": [],
+      "schemelessSites": [
+        "ebay.co.uk",
+        "ebay.com"
       ],
-      "schemelessSites": [],
       "params": [
         "_from",
         "_trkparms",
@@ -313,10 +309,10 @@
       "source": "lgpl",
       "group": "etsy",
       "scope": "site",
-      "hosts": [
-        "www.etsy.com"
+      "hosts": [],
+      "schemelessSites": [
+        "etsy.com"
       ],
-      "schemelessSites": [],
       "params": [
         "click_key",
         "click_sum",
@@ -328,10 +324,10 @@
       "source": "lgpl",
       "group": "facebook",
       "scope": "site",
-      "hosts": [
-        "www.facebook.com"
+      "hosts": [],
+      "schemelessSites": [
+        "facebook.com"
       ],
-      "schemelessSites": [],
       "params": [
         "extid",
         "mibextid",
@@ -342,10 +338,10 @@
       "source": "lgpl",
       "group": "flipkart",
       "scope": "site",
-      "hosts": [
-        "www.flipkart.com"
+      "hosts": [],
+      "schemelessSites": [
+        "flipkart.com"
       ],
-      "schemelessSites": [],
       "params": [
         "_refid",
         "affid",
@@ -362,10 +358,10 @@
       "source": "lgpl",
       "group": "forbes",
       "scope": "site",
-      "hosts": [
-        "www.forbes.com"
+      "hosts": [],
+      "schemelessSites": [
+        "forbes.com"
       ],
-      "schemelessSites": [],
       "params": [
         "sh"
       ]
@@ -374,10 +370,10 @@
       "source": "lgpl",
       "group": "github",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "github.com"
       ],
-      "schemelessSites": [],
       "params": [
         "email_source",
         "email_token"
@@ -413,198 +409,196 @@
       "source": "lgpl",
       "group": "google",
       "scope": "site",
-      "hosts": [
-        "consent.google.de",
-        "support.google.com",
-        "www.google.ad",
-        "www.google.ae",
-        "www.google.al",
-        "www.google.am",
-        "www.google.as",
-        "www.google.at",
-        "www.google.az",
-        "www.google.ba",
-        "www.google.be",
-        "www.google.bf",
-        "www.google.bg",
-        "www.google.bi",
-        "www.google.bj",
-        "www.google.bs",
-        "www.google.bt",
-        "www.google.by",
-        "www.google.ca",
-        "www.google.cat",
-        "www.google.cd",
-        "www.google.cf",
-        "www.google.cg",
-        "www.google.ch",
-        "www.google.ci",
-        "www.google.cl",
-        "www.google.cm",
-        "www.google.cn",
-        "www.google.co.ao",
-        "www.google.co.bw",
-        "www.google.co.ck",
-        "www.google.co.cr",
-        "www.google.co.id",
-        "www.google.co.il",
-        "www.google.co.in",
-        "www.google.co.jp",
-        "www.google.co.ke",
-        "www.google.co.kr",
-        "www.google.co.ls",
-        "www.google.co.ma",
-        "www.google.co.mz",
-        "www.google.co.nz",
-        "www.google.co.th",
-        "www.google.co.tz",
-        "www.google.co.ug",
-        "www.google.co.uk",
-        "www.google.co.uz",
-        "www.google.co.ve",
-        "www.google.co.vi",
-        "www.google.co.za",
-        "www.google.co.zm",
-        "www.google.co.zw",
-        "www.google.com",
-        "www.google.com.af",
-        "www.google.com.ag",
-        "www.google.com.ar",
-        "www.google.com.au",
-        "www.google.com.bd",
-        "www.google.com.bh",
-        "www.google.com.bn",
-        "www.google.com.bo",
-        "www.google.com.br",
-        "www.google.com.bz",
-        "www.google.com.co",
-        "www.google.com.cu",
-        "www.google.com.cy",
-        "www.google.com.do",
-        "www.google.com.ec",
-        "www.google.com.eg",
-        "www.google.com.et",
-        "www.google.com.fj",
-        "www.google.com.gh",
-        "www.google.com.gi",
-        "www.google.com.gt",
-        "www.google.com.hk",
-        "www.google.com.jm",
-        "www.google.com.kh",
-        "www.google.com.kw",
-        "www.google.com.lb",
-        "www.google.com.ly",
-        "www.google.com.mm",
-        "www.google.com.mt",
-        "www.google.com.mx",
-        "www.google.com.my",
-        "www.google.com.na",
-        "www.google.com.ng",
-        "www.google.com.ni",
-        "www.google.com.np",
-        "www.google.com.om",
-        "www.google.com.pa",
-        "www.google.com.pe",
-        "www.google.com.pg",
-        "www.google.com.ph",
-        "www.google.com.pk",
-        "www.google.com.pr",
-        "www.google.com.py",
-        "www.google.com.qa",
-        "www.google.com.sa",
-        "www.google.com.sb",
-        "www.google.com.sg",
-        "www.google.com.sl",
-        "www.google.com.sv",
-        "www.google.com.tj",
-        "www.google.com.tr",
-        "www.google.com.tw",
-        "www.google.com.ua",
-        "www.google.com.uy",
-        "www.google.com.vc",
-        "www.google.com.vn",
-        "www.google.cv",
-        "www.google.cz",
-        "www.google.de",
-        "www.google.dj",
-        "www.google.dk",
-        "www.google.dm",
-        "www.google.dz",
-        "www.google.ee",
-        "www.google.es",
-        "www.google.fi",
-        "www.google.fm",
-        "www.google.fr",
-        "www.google.ga",
-        "www.google.ge",
-        "www.google.gg",
-        "www.google.gl",
-        "www.google.gm",
-        "www.google.gr",
-        "www.google.gy",
-        "www.google.hn",
-        "www.google.hr",
-        "www.google.ht",
-        "www.google.hu",
-        "www.google.ie",
-        "www.google.im",
-        "www.google.iq",
-        "www.google.is",
-        "www.google.it",
-        "www.google.je",
-        "www.google.jo",
-        "www.google.kg",
-        "www.google.ki",
-        "www.google.kz",
-        "www.google.la",
-        "www.google.li",
-        "www.google.lk",
-        "www.google.lt",
-        "www.google.lu",
-        "www.google.lv",
-        "www.google.md",
-        "www.google.me",
-        "www.google.mg",
-        "www.google.mk",
-        "www.google.ml",
-        "www.google.mn",
-        "www.google.mu",
-        "www.google.mv",
-        "www.google.mw",
-        "www.google.ne",
-        "www.google.nl",
-        "www.google.no",
-        "www.google.nr",
-        "www.google.nu",
-        "www.google.pl",
-        "www.google.pn",
-        "www.google.ps",
-        "www.google.pt",
-        "www.google.ro",
-        "www.google.rs",
-        "www.google.ru",
-        "www.google.rw",
-        "www.google.sc",
-        "www.google.se",
-        "www.google.sh",
-        "www.google.si",
-        "www.google.sk",
-        "www.google.sm",
-        "www.google.sn",
-        "www.google.so",
-        "www.google.sr",
-        "www.google.st",
-        "www.google.td",
-        "www.google.tg",
-        "www.google.tl",
-        "www.google.tm",
-        "www.google.tn",
-        "www.google.to",
-        "www.google.tt",
-        "www.google.vu",
-        "www.google.ws"
+      "hosts": [],
+      "schemelessSites": [
+        "google.ad",
+        "google.ae",
+        "google.al",
+        "google.am",
+        "google.as",
+        "google.at",
+        "google.az",
+        "google.ba",
+        "google.be",
+        "google.bf",
+        "google.bg",
+        "google.bi",
+        "google.bj",
+        "google.bs",
+        "google.bt",
+        "google.by",
+        "google.ca",
+        "google.cat",
+        "google.cd",
+        "google.cf",
+        "google.cg",
+        "google.ch",
+        "google.ci",
+        "google.cl",
+        "google.cm",
+        "google.cn",
+        "google.co.ao",
+        "google.co.bw",
+        "google.co.ck",
+        "google.co.cr",
+        "google.co.id",
+        "google.co.il",
+        "google.co.in",
+        "google.co.jp",
+        "google.co.ke",
+        "google.co.kr",
+        "google.co.ls",
+        "google.co.ma",
+        "google.co.mz",
+        "google.co.nz",
+        "google.co.th",
+        "google.co.tz",
+        "google.co.ug",
+        "google.co.uk",
+        "google.co.uz",
+        "google.co.ve",
+        "google.co.vi",
+        "google.co.za",
+        "google.co.zm",
+        "google.co.zw",
+        "google.com",
+        "google.com.af",
+        "google.com.ag",
+        "google.com.ar",
+        "google.com.au",
+        "google.com.bd",
+        "google.com.bh",
+        "google.com.bn",
+        "google.com.bo",
+        "google.com.br",
+        "google.com.bz",
+        "google.com.co",
+        "google.com.cu",
+        "google.com.cy",
+        "google.com.do",
+        "google.com.ec",
+        "google.com.eg",
+        "google.com.et",
+        "google.com.fj",
+        "google.com.gh",
+        "google.com.gi",
+        "google.com.gt",
+        "google.com.hk",
+        "google.com.jm",
+        "google.com.kh",
+        "google.com.kw",
+        "google.com.lb",
+        "google.com.ly",
+        "google.com.mm",
+        "google.com.mt",
+        "google.com.mx",
+        "google.com.my",
+        "google.com.na",
+        "google.com.ng",
+        "google.com.ni",
+        "google.com.np",
+        "google.com.om",
+        "google.com.pa",
+        "google.com.pe",
+        "google.com.pg",
+        "google.com.ph",
+        "google.com.pk",
+        "google.com.pr",
+        "google.com.py",
+        "google.com.qa",
+        "google.com.sa",
+        "google.com.sb",
+        "google.com.sg",
+        "google.com.sl",
+        "google.com.sv",
+        "google.com.tj",
+        "google.com.tr",
+        "google.com.tw",
+        "google.com.ua",
+        "google.com.uy",
+        "google.com.vc",
+        "google.com.vn",
+        "google.cv",
+        "google.cz",
+        "google.de",
+        "google.dj",
+        "google.dk",
+        "google.dm",
+        "google.dz",
+        "google.ee",
+        "google.es",
+        "google.fi",
+        "google.fm",
+        "google.fr",
+        "google.ga",
+        "google.ge",
+        "google.gg",
+        "google.gl",
+        "google.gm",
+        "google.gr",
+        "google.gy",
+        "google.hn",
+        "google.hr",
+        "google.ht",
+        "google.hu",
+        "google.ie",
+        "google.im",
+        "google.iq",
+        "google.is",
+        "google.it",
+        "google.je",
+        "google.jo",
+        "google.kg",
+        "google.ki",
+        "google.kz",
+        "google.la",
+        "google.li",
+        "google.lk",
+        "google.lt",
+        "google.lu",
+        "google.lv",
+        "google.md",
+        "google.me",
+        "google.mg",
+        "google.mk",
+        "google.ml",
+        "google.mn",
+        "google.mu",
+        "google.mv",
+        "google.mw",
+        "google.ne",
+        "google.nl",
+        "google.no",
+        "google.nr",
+        "google.nu",
+        "google.pl",
+        "google.pn",
+        "google.ps",
+        "google.pt",
+        "google.ro",
+        "google.rs",
+        "google.ru",
+        "google.rw",
+        "google.sc",
+        "google.se",
+        "google.sh",
+        "google.si",
+        "google.sk",
+        "google.sm",
+        "google.sn",
+        "google.so",
+        "google.sr",
+        "google.st",
+        "google.td",
+        "google.tg",
+        "google.tl",
+        "google.tm",
+        "google.tn",
+        "google.to",
+        "google.tt",
+        "google.vu",
+        "google.ws"
       ],
-      "schemelessSites": [],
       "params": [
         "aqs",
         "bih",
@@ -638,11 +632,10 @@
       "source": "lgpl",
       "group": "imdb",
       "scope": "site",
-      "hosts": [
-        "m.imdb.com",
-        "www.imdb.com"
+      "hosts": [],
+      "schemelessSites": [
+        "imdb.com"
       ],
-      "schemelessSites": [],
       "params": [
         "pf_rd_i",
         "pf_rd_m",
@@ -657,15 +650,14 @@
       "source": "lgpl",
       "group": "lazada",
       "scope": "site",
-      "hosts": [
-        "pages.lazada.co.id",
-        "www.lazada.co.id",
-        "www.lazada.com.my",
-        "www.lazada.com.ph",
-        "www.lazada.sg",
-        "www.lazada.vn"
+      "hosts": [],
+      "schemelessSites": [
+        "lazada.co.id",
+        "lazada.com.my",
+        "lazada.com.ph",
+        "lazada.sg",
+        "lazada.vn"
       ],
-      "schemelessSites": [],
       "params": [
         "acm",
         "ad_src",
@@ -685,11 +677,10 @@
       "source": "lgpl",
       "group": "linkedin",
       "scope": "site",
-      "hosts": [
-        "ca.linkedin.com",
-        "ro.linkedin.com"
+      "hosts": [],
+      "schemelessSites": [
+        "linkedin.com"
       ],
-      "schemelessSites": [],
       "params": [
         "refid",
         "trackingid",
@@ -700,10 +691,10 @@
       "source": "lgpl",
       "group": "mirror",
       "scope": "site",
-      "hosts": [
-        "www.mirror.co.uk"
+      "hosts": [],
+      "schemelessSites": [
+        "mirror.co.uk"
       ],
-      "schemelessSites": [],
       "params": [
         "int_source"
       ]
@@ -712,10 +703,10 @@
       "source": "lgpl",
       "group": "msn",
       "scope": "site",
-      "hosts": [
-        "www.msn.com"
+      "hosts": [],
+      "schemelessSites": [
+        "msn.com"
       ],
-      "schemelessSites": [],
       "params": [
         "cvid",
         "ei",
@@ -726,10 +717,10 @@
       "source": "lgpl",
       "group": "newyorker",
       "scope": "site",
-      "hosts": [
-        "www.newyorker.com"
+      "hosts": [],
+      "schemelessSites": [
+        "newyorker.com"
       ],
-      "schemelessSites": [],
       "params": [
         "bxid",
         "cndid",
@@ -742,10 +733,10 @@
       "source": "lgpl",
       "group": "nytimes",
       "scope": "site",
-      "hosts": [
-        "www.nytimes.com"
+      "hosts": [],
+      "schemelessSites": [
+        "nytimes.com"
       ],
-      "schemelessSites": [],
       "params": [
         "smid"
       ]
@@ -754,10 +745,10 @@
       "source": "lgpl",
       "group": "reddit",
       "scope": "site",
-      "hosts": [
-        "www.reddit.com"
+      "hosts": [],
+      "schemelessSites": [
+        "reddit.com"
       ],
-      "schemelessSites": [],
       "params": [
         "correlation_id",
         "ref",
@@ -770,10 +761,10 @@
       "source": "lgpl",
       "group": "theathletic",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "theathletic.com"
       ],
-      "schemelessSites": [],
       "params": [
         "source"
       ]
@@ -782,10 +773,10 @@
       "source": "lgpl",
       "group": "tiktok",
       "scope": "site",
-      "hosts": [
-        "www.tiktok.com"
+      "hosts": [],
+      "schemelessSites": [
+        "tiktok.com"
       ],
-      "schemelessSites": [],
       "params": [
         "embed_source",
         "enter_method",
@@ -806,11 +797,10 @@
       "source": "lgpl",
       "group": "twitch",
       "scope": "site",
-      "hosts": [
-        "dev.twitch.tv",
-        "www.twitch.tv"
+      "hosts": [],
+      "schemelessSites": [
+        "twitch.tv"
       ],
-      "schemelessSites": [],
       "params": [
         "tt_content",
         "tt_medium"
@@ -820,12 +810,11 @@
       "source": "lgpl",
       "group": "twitter",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "twitter.com",
-        "www.twitter.com",
         "x.com"
       ],
-      "schemelessSites": [],
       "params": [
         "cxt",
         "refsrc",
@@ -836,10 +825,10 @@
       "source": "lgpl",
       "group": "wallstreetjournal",
       "scope": "site",
-      "hosts": [
-        "www.wsj.com"
+      "hosts": [],
+      "schemelessSites": [
+        "wsj.com"
       ],
-      "schemelessSites": [],
       "params": [
         "reflink"
       ]
@@ -848,11 +837,11 @@
       "source": "lgpl",
       "group": "wired",
       "scope": "site",
-      "hosts": [
-        "www.wired.co.uk",
-        "www.wired.com"
+      "hosts": [],
+      "schemelessSites": [
+        "wired.co.uk",
+        "wired.com"
       ],
-      "schemelessSites": [],
       "params": [
         "mbid"
       ]
@@ -861,10 +850,10 @@
       "source": "lgpl",
       "group": "wise",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "wise.com"
       ],
-      "schemelessSites": [],
       "params": [
         "adref",
         "clickref",
@@ -876,10 +865,10 @@
       "source": "lgpl",
       "group": "yandex",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "yandex.com"
       ],
-      "schemelessSites": [],
       "params": [
         "clid",
         "did",
@@ -897,13 +886,11 @@
       "source": "lgpl",
       "group": "youtube",
       "scope": "site",
-      "hosts": [
-        "m.youtube.com",
-        "www.youtube.com",
+      "hosts": [],
+      "schemelessSites": [
         "youtu.be",
         "youtube.com"
       ],
-      "schemelessSites": [],
       "params": [
         "feature",
         "is",
@@ -917,44 +904,45 @@
       "group": "amazon",
       "scope": "site",
       "hosts": [
-        "www.amazon.ac",
-        "www.amazon.ae",
-        "www.amazon.ca",
-        "www.amazon.cn",
-        "www.amazon.co.jp",
-        "www.amazon.co.uk",
-        "www.amazon.co.za",
-        "www.amazon.com",
-        "www.amazon.com.au",
-        "www.amazon.com.be",
-        "www.amazon.com.br",
-        "www.amazon.com.mx",
-        "www.amazon.com.tr",
-        "www.amazon.de",
-        "www.amazon.eg",
-        "www.amazon.es",
-        "www.amazon.fr",
-        "www.amazon.ie",
-        "www.amazon.in",
-        "www.amazon.it",
-        "www.amazon.nl",
-        "www.amazon.pl",
-        "www.amazon.sa",
-        "www.amazon.se",
-        "www.amazon.sg",
-        "www.audible.ca",
-        "www.audible.co.jp",
-        "www.audible.co.uk",
-        "www.audible.com",
-        "www.audible.com.au",
-        "www.audible.com.br",
-        "www.audible.de",
-        "www.audible.es",
-        "www.audible.fr",
-        "www.audible.in",
-        "www.audible.it"
+        "www.amazon.com.be"
       ],
-      "schemelessSites": [],
+      "schemelessSites": [
+        "amazon.ac",
+        "amazon.ae",
+        "amazon.ca",
+        "amazon.cn",
+        "amazon.co.jp",
+        "amazon.co.uk",
+        "amazon.co.za",
+        "amazon.com",
+        "amazon.com.au",
+        "amazon.com.br",
+        "amazon.com.mx",
+        "amazon.com.tr",
+        "amazon.de",
+        "amazon.eg",
+        "amazon.es",
+        "amazon.fr",
+        "amazon.ie",
+        "amazon.in",
+        "amazon.it",
+        "amazon.nl",
+        "amazon.pl",
+        "amazon.sa",
+        "amazon.se",
+        "amazon.sg",
+        "audible.ca",
+        "audible.co.jp",
+        "audible.co.uk",
+        "audible.com",
+        "audible.com.au",
+        "audible.com.br",
+        "audible.de",
+        "audible.es",
+        "audible.fr",
+        "audible.in",
+        "audible.it"
+      ],
       "params": [
         "__mk_de_de",
         "aaxitk",
@@ -1000,12 +988,10 @@
       "source": "mpl",
       "group": "bilibili",
       "scope": "site",
-      "hosts": [
-        "live.bilibili.com",
-        "space.bilibili.com",
-        "www.bilibili.com"
+      "hosts": [],
+      "schemelessSites": [
+        "bilibili.com"
       ],
-      "schemelessSites": [],
       "params": [
         "broadcast_type",
         "is_room_feed",
@@ -1052,10 +1038,10 @@
       "source": "mpl",
       "group": "facebook",
       "scope": "site",
-      "hosts": [
-        "www.facebook.com"
+      "hosts": [],
+      "schemelessSites": [
+        "facebook.com"
       ],
-      "schemelessSites": [],
       "params": [
         "__cft__[0]",
         "__cft__%5b0%5d",
@@ -1081,6 +1067,8 @@
         "_hsmi",
         "_ke",
         "_kx",
+        "_su_rec",
+        "_su_rec_id",
         "adgroupid",
         "adid",
         "adtype",
@@ -1257,10 +1245,10 @@
       "source": "mpl",
       "group": "handelsblatt",
       "scope": "site",
-      "hosts": [
-        "www.handelsblatt.com"
+      "hosts": [],
+      "schemelessSites": [
+        "handelsblatt.com"
       ],
-      "schemelessSites": [],
       "params": [
         "share"
       ]
@@ -1269,10 +1257,10 @@
       "source": "mpl",
       "group": "humblebundle",
       "scope": "site",
-      "hosts": [
-        "www.humblebundle.com"
+      "hosts": [],
+      "schemelessSites": [
+        "humblebundle.com"
       ],
-      "schemelessSites": [],
       "params": [
         "hmb_campaign",
         "hmb_medium",
@@ -1283,10 +1271,10 @@
       "source": "mpl",
       "group": "instagram",
       "scope": "site",
-      "hosts": [
-        "www.instagram.com"
+      "hosts": [],
+      "schemelessSites": [
+        "instagram.com"
       ],
-      "schemelessSites": [],
       "params": [
         "ig_rid",
         "igshid"
@@ -1296,11 +1284,16 @@
       "source": "mpl",
       "group": "linkedin",
       "scope": "site",
-      "hosts": [
-        "www.linkedin.com"
+      "hosts": [],
+      "schemelessSites": [
+        "linkedin.com"
       ],
-      "schemelessSites": [],
       "params": [
+        "alternatechannel",
+        "ebp",
+        "isjobsearch",
+        "lipi",
+        "origin",
         "rcm"
       ]
     },
@@ -1308,10 +1301,10 @@
       "source": "mpl",
       "group": "meetup",
       "scope": "site",
-      "hosts": [
-        "www.meetup.com"
+      "hosts": [],
+      "schemelessSites": [
+        "meetup.com"
       ],
-      "schemelessSites": [],
       "params": [
         "eventorigin",
         "recid",
@@ -1323,10 +1316,10 @@
       "source": "mpl",
       "group": "shopee",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "shopee.cl",
         "shopee.co.id",
-        "shopee.co.vn",
         "shopee.com.br",
         "shopee.com.co",
         "shopee.com.mx",
@@ -1336,7 +1329,6 @@
         "shopee.tw",
         "shopee.vn"
       ],
-      "schemelessSites": [],
       "params": [
         "sp_atk",
         "xptdk"
@@ -1346,10 +1338,10 @@
       "source": "mpl",
       "group": "spotify",
       "scope": "site",
-      "hosts": [
-        "open.spotify.com"
+      "hosts": [],
+      "schemelessSites": [
+        "spotify.com"
       ],
-      "schemelessSites": [],
       "params": [
         "si"
       ]
@@ -1358,10 +1350,10 @@
       "source": "mpl",
       "group": "tokopedia",
       "scope": "site",
-      "hosts": [
-        "www.tokopedia.com"
+      "hosts": [],
+      "schemelessSites": [
+        "tokopedia.com"
       ],
-      "schemelessSites": [],
       "params": [
         "extparam"
       ]
@@ -1370,12 +1362,11 @@
       "source": "mpl",
       "group": "twitter",
       "scope": "site",
-      "hosts": [
+      "hosts": [],
+      "schemelessSites": [
         "twitter.com",
-        "www.twitter.com",
         "x.com"
       ],
-      "schemelessSites": [],
       "params": [
         "ref_src",
         "ref_url"
@@ -1385,14 +1376,12 @@
       "source": "mpl",
       "group": "wikimedia",
       "scope": "site",
-      "hosts": [
-        "test.wikidata.org",
-        "w.wiki",
-        "www.wikidata.org",
-        "www.wikifunctions.org"
-      ],
+      "hosts": [],
       "schemelessSites": [
         "mediawiki.org",
+        "w.wiki",
+        "wikidata.org",
+        "wikifunctions.org",
         "wikimedia.org",
         "wikipedia.org"
       ],
